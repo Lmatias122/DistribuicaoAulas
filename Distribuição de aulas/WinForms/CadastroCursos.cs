@@ -10,19 +10,25 @@ using System.Windows.Forms;
 
 namespace Distribuição_de_aulas
 {
-    public partial class CadastroDisciplinas : Form
+    public partial class CadastroCursos : Form
     {
-        public CadastroDisciplinas()
+        public CadastroCursos()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void CadastroCursos_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

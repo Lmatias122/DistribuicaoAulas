@@ -10,17 +10,38 @@ using System.Windows.Forms;
 
 namespace Distribuição_de_aulas
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
         }
 
-        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
+            frmLogin f = new frmLogin();
 
+            while (cadastroUsuario.UsuarioLogado == null){
+                Visible = false;
+                f.ShowDialog();
+
+                if (frmLogin.Cancelar)
+                {
+                    Application.Exit();
+                    return;
+                }
+            }
+
+            Visible = true;
         }
+
+
+
+
+
+
+
+
 
         private void cadastrarDToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -75,5 +96,12 @@ namespace Distribuição_de_aulas
             ConsultaDistribuicao distribuicao = new ConsultaDistribuicao();
             distribuicao.Show();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        
     }
 }

@@ -17,12 +17,18 @@ namespace Distribuição_de_aulas
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void CadastroCursos_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
