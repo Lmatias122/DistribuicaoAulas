@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distribuição de aulas", "Distribuição de aulas\Distribuição de aulas.csproj", "{F40870D6-2D6A-4A09-B878-604158CA511A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distribuicao.DataModels", "Distribuicao.DataModels\Distribuicao.DataModels.csproj", "{CE263690-2E6C-4D1B-B512-2EC5AB744380}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Distribuicao.DataModels", "Distribuicao.DataModels\Distribuicao.DataModels.csproj", "{CE263690-2E6C-4D1B-B512-2EC5AB744380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distribuicao.DataAccess", "Distribuicao.DataAccess\Distribuicao.DataAccess.csproj", "{798F11D3-204E-43A5-8D23-56ABA83F447F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{CE263690-2E6C-4D1B-B512-2EC5AB744380}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE263690-2E6C-4D1B-B512-2EC5AB744380}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE263690-2E6C-4D1B-B512-2EC5AB744380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{798F11D3-204E-43A5-8D23-56ABA83F447F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798F11D3-204E-43A5-8D23-56ABA83F447F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798F11D3-204E-43A5-8D23-56ABA83F447F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798F11D3-204E-43A5-8D23-56ABA83F447F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

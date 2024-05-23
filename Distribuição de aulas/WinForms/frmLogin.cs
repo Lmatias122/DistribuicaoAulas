@@ -1,4 +1,6 @@
-﻿using Distribuição_de_aulas.dbConnection;
+﻿using Distribuicao.DataModels;
+using Distribuicao.DataAccess;
+using Distribuição_de_aulas.dbConnection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,23 +26,25 @@ namespace Distribuição_de_aulas
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string nome = txtNome.Text;
-            string senha = txtSenha.Text;
-
-             if (DbBLL.Login(nome, senha))
+            try
             {
-                Close();
+                string nome = txtNome.Text;
+                string senha = txtSenha.Text;
+
+                if (Login(nome, senha))
+                {
+                    Close();
+                }
+                else
+                {
+                    throw new Exception("Usuario ou senha incorreto!");                   
+                }
 
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Usuario ou senha incorreto!");
+                MessageBox.Show(ex.Message);
             }
-
-            
-           
-
-              
 
         }
 
@@ -52,14 +56,41 @@ namespace Distribuição_de_aulas
 
         private void checkSenha_CheckedChanged(object sender, EventArgs e)
         {
-            if(txtSenha.PasswordChar == '*')
+            try
             {
-                txtSenha.PasswordChar = default;
+                if (txtSenha.PasswordChar == '*')
+                {
+                    txtSenha.PasswordChar = default;
+                }
+                else
+                {
+                    txtSenha.PasswordChar = '*';
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
-            else
-            {
-                txtSenha.PasswordChar = '*';
+        }
 
+        public static bool Login(string nome, string senha)
+        {
+            UsuarioModel usuario = new UsuarioModel() { nomeusuario = nome, senha =senha };
+            try
+            {
+                var user = UsuarioQuery.GetUserLogin(usuario);
+
+                if (nome == user.nomeusuario && senha == user.senha)
+                {
+                    cadastroUsuario.UsuarioLogado = user;
+                    return true;
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
             }
         }
     }
