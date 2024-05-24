@@ -26,18 +26,5 @@ namespace Distribuição_de_aulas
             set { _UserLogado = value; }
         }
 
-        public static bool Login(string email, string senha)
-        {
-            foreach(UsuarioModel usuario in usuarios)
-            {
-                if(usuario.nomeusuario == email && usuario.senha == senha)
-                {
-                    UsuarioLogado = usuario;
-                    return true;
-                }               
-
-            }
-            return false;
-        }
     }
 }

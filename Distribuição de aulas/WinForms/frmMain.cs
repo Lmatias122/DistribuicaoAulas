@@ -19,18 +19,19 @@ namespace Distribuição_de_aulas
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //frmLogin f = new frmLogin();
+            frmLogin f = new frmLogin();
 
-            //while (cadastroUsuario.UsuarioLogado == null){
-            //    Visible = false;
-            //    f.ShowDialog();
+            while (cadastroUsuario.UsuarioLogado == null)
+            {
+                Visible = false;
+                f.ShowDialog();
 
-            //    if (frmLogin.Cancelar)
-            //    {
-            //        Application.Exit();
-            //        return;
-            //    }
-            //}
+                if (frmLogin.Cancelar)
+                {
+                    Application.Exit();
+                    return;
+                }
+            }
 
             Visible = true;
         }

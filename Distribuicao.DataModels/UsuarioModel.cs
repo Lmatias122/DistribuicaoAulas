@@ -4,5 +4,6 @@
     {
         public string nomeusuario { get; set; }
         public string senha { get; set; }
+        public ECargos cargo { get; set; }
     }
 }

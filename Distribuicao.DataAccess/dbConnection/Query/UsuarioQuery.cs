@@ -11,7 +11,7 @@ namespace Distribuição_de_aulas.dbConnection
 {
     public class UsuarioQuery
     {
-        public bool Add(UsuarioModel usuario)
+        public static bool Add(UsuarioModel usuario)
         {
             var conn = new DbConnection();
                 

@@ -158,7 +158,7 @@
             "4",
             "5"});
             this.cmbSemestre.Location = new System.Drawing.Point(278, 84);
-            this.cmbSemestre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbSemestre.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSemestre.Name = "cmbSemestre";
             this.cmbSemestre.Size = new System.Drawing.Size(594, 27);
             this.cmbSemestre.TabIndex = 14;
@@ -173,7 +173,7 @@
             "Tecnologia Ánalise e Desenvolvimento de Sistemas",
             "Engenharia de Produção"});
             this.cmbGradeC.Location = new System.Drawing.Point(278, 154);
-            this.cmbGradeC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbGradeC.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGradeC.Name = "cmbGradeC";
             this.cmbGradeC.Size = new System.Drawing.Size(594, 27);
             this.cmbGradeC.TabIndex = 15;

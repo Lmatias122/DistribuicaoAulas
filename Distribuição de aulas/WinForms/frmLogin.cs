@@ -33,6 +33,8 @@ namespace Distribuição_de_aulas
 
                 if (Login(nome, senha))
                 {
+                    
+
                     Close();
                 }
                 else
@@ -53,6 +55,22 @@ namespace Distribuição_de_aulas
             Cancelar = true;
             Close();
         }
+
+        //private void btnAddUser_Click(object sender, EventArgs e)
+        //{
+        //    string nome = txtNome.Text;
+        //    string senha = txtSenha.Text;           
+        //    UsuarioModel usuario = new UsuarioModel() { nomeusuario = nome, senha = senha };
+
+        //    var teste = UsuarioQuery.Add(usuario);
+
+        //    if (teste)
+        //    {
+        //        MessageBox.Show("Usuario Adicionado com sucesso");
+
+        //        Login(nome, senha);
+        //    }
+        //}
 
         private void checkSenha_CheckedChanged(object sender, EventArgs e)
         {
@@ -75,15 +93,31 @@ namespace Distribuição_de_aulas
         public static bool Login(string nome, string senha)
         {
             UsuarioModel usuario = new UsuarioModel() { nomeusuario = nome, senha =senha };
+
             try
             {
+                //var teste = UsuarioQuery.Getall();
                 var user = UsuarioQuery.GetUserLogin(usuario);
-
-                if (nome == user.nomeusuario && senha == user.senha)
+                if (user != null)
                 {
-                    cadastroUsuario.UsuarioLogado = user;
-                    return true;
+                    if (nome == user.nomeusuario && senha == user.senha)
+                    {
+                        cadastroUsuario.UsuarioLogado = user;
+                        var cargo = user.cargo;
+                         
+                        switch (cargo)
+                        {
+                            case (ECargos)0:  break;
+                            case (ECargos)1: break;
+                            case (ECargos)2: break;
+
+                        }
+                       
+                        return true;
+                    }
                 }
+
+              
 
                 return false;
             }
@@ -93,5 +127,7 @@ namespace Distribuição_de_aulas
                 return false;
             }
         }
+
+       
     }
 }
