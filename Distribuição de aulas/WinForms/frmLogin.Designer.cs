@@ -36,7 +36,6 @@
             this.checkSenha = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -125,16 +124,6 @@
             this.lblNome.TabIndex = 3;
             this.lblNome.Text = "Nome";
             // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(192, 3);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 31);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Nome";
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,7 +131,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(629, 336);
             this.ControlBox = false;
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkSenha);
             this.Controls.Add(this.txtSenha);
@@ -171,6 +159,5 @@
         private System.Windows.Forms.CheckBox checkSenha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label label2;
     }
 }

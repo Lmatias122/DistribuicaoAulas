@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Distribuição_de_aulas
 {
-    public partial class ConsultaCursos : Form
+    public partial class frmConsultaDistribuicao : Form
     {
-        public ConsultaCursos()
+        public frmConsultaDistribuicao()
         {
             InitializeComponent();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

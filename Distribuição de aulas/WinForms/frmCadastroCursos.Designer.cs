@@ -1,6 +1,6 @@
 ﻿namespace Distribuição_de_aulas
 {
-    partial class CadastroCursos
+    partial class frmCadastroCursos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.lblNome = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblSemestre = new System.Windows.Forms.Label();
@@ -40,6 +37,9 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.cmbSemestre = new System.Windows.Forms.ComboBox();
             this.cmbGradeC = new System.Windows.Forms.ComboBox();
+            this.checkNoite = new System.Windows.Forms.CheckBox();
+            this.checkTarde = new System.Windows.Forms.CheckBox();
+            this.checkManha = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblNome
@@ -50,39 +50,6 @@
             this.lblNome.Size = new System.Drawing.Size(138, 37);
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(267, 247);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 28);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Manhã";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(267, 295);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(78, 23);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "Tarde";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.checkBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(267, 337);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(78, 23);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "Noite";
-            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // lblPeriodo
             // 
@@ -100,7 +67,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.Location = new System.Drawing.Point(278, 20);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(594, 27);
+            this.txtNome.Size = new System.Drawing.Size(579, 32);
             this.txtNome.TabIndex = 5;
             // 
             // lblSemestre
@@ -123,11 +90,10 @@
             // 
             // btnCadastro
             // 
-            this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCadastro.Location = new System.Drawing.Point(540, 516);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(108, 47);
+            this.btnCadastro.Size = new System.Drawing.Size(120, 47);
             this.btnCadastro.TabIndex = 12;
             this.btnCadastro.Text = "Cadastrar";
             this.btnCadastro.UseVisualStyleBackColor = true;
@@ -138,7 +104,7 @@
             this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVoltar.Location = new System.Drawing.Point(764, 516);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(108, 47);
+            this.btnVoltar.Size = new System.Drawing.Size(104, 47);
             this.btnVoltar.TabIndex = 13;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -158,9 +124,9 @@
             "4",
             "5"});
             this.cmbSemestre.Location = new System.Drawing.Point(278, 84);
-            this.cmbSemestre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbSemestre.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSemestre.Name = "cmbSemestre";
-            this.cmbSemestre.Size = new System.Drawing.Size(594, 27);
+            this.cmbSemestre.Size = new System.Drawing.Size(579, 32);
             this.cmbSemestre.TabIndex = 14;
             // 
             // cmbGradeC
@@ -173,17 +139,62 @@
             "Tecnologia Ánalise e Desenvolvimento de Sistemas",
             "Engenharia de Produção"});
             this.cmbGradeC.Location = new System.Drawing.Point(278, 154);
-            this.cmbGradeC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbGradeC.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGradeC.Name = "cmbGradeC";
-            this.cmbGradeC.Size = new System.Drawing.Size(594, 27);
+            this.cmbGradeC.Size = new System.Drawing.Size(579, 32);
             this.cmbGradeC.TabIndex = 15;
             // 
-            // CadastroCursos
+            // checkNoite
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.checkNoite.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkNoite.AutoSize = true;
+            this.checkNoite.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkNoite.Location = new System.Drawing.Point(778, 227);
+            this.checkNoite.Name = "checkNoite";
+            this.checkNoite.Size = new System.Drawing.Size(79, 28);
+            this.checkNoite.TabIndex = 38;
+            this.checkNoite.Text = "Noite";
+            this.checkNoite.UseVisualStyleBackColor = true;
+            // 
+            // checkTarde
+            // 
+            this.checkTarde.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkTarde.AutoSize = true;
+            this.checkTarde.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkTarde.Location = new System.Drawing.Point(540, 225);
+            this.checkTarde.Name = "checkTarde";
+            this.checkTarde.Size = new System.Drawing.Size(84, 28);
+            this.checkTarde.TabIndex = 36;
+            this.checkTarde.Text = "Tarde";
+            this.checkTarde.UseVisualStyleBackColor = true;
+            // 
+            // checkManha
+            // 
+            this.checkManha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkManha.AutoSize = true;
+            this.checkManha.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkManha.Location = new System.Drawing.Point(278, 225);
+            this.checkManha.Name = "checkManha";
+            this.checkManha.Size = new System.Drawing.Size(91, 28);
+            this.checkManha.TabIndex = 37;
+            this.checkManha.Text = "Manhã";
+            this.checkManha.UseVisualStyleBackColor = true;
+            // 
+            // frmCadastroCursos
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(922, 587);
+            this.Controls.Add(this.checkNoite);
+            this.Controls.Add(this.checkTarde);
+            this.Controls.Add(this.checkManha);
             this.Controls.Add(this.cmbGradeC);
             this.Controls.Add(this.cmbSemestre);
             this.Controls.Add(this.btnVoltar);
@@ -192,14 +203,11 @@
             this.Controls.Add(this.lblSemestre);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblPeriodo);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.lblNome);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximumSize = new System.Drawing.Size(1000, 700);
             this.MinimumSize = new System.Drawing.Size(916, 574);
-            this.Name = "CadastroCursos";
+            this.Name = "frmCadastroCursos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroCursos";
             this.Load += new System.EventHandler(this.CadastroCursos_Load);
@@ -211,9 +219,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.Label lblPeriodo;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblSemestre;
@@ -222,5 +227,8 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.ComboBox cmbSemestre;
         private System.Windows.Forms.ComboBox cmbGradeC;
+        private System.Windows.Forms.CheckBox checkNoite;
+        private System.Windows.Forms.CheckBox checkTarde;
+        private System.Windows.Forms.CheckBox checkManha;
     }
 }

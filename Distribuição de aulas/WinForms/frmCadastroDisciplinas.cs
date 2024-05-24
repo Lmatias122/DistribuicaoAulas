@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Distribuição_de_aulas
 {
-    public partial class CadastroCursos : Form
+    public partial class frmCadastroDisciplinas : Form
     {
-        public CadastroCursos()
+        public frmCadastroDisciplinas()
         {
             InitializeComponent();
         }

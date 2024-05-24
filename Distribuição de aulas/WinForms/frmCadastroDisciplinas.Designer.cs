@@ -1,6 +1,6 @@
 ﻿namespace Distribuição_de_aulas
 {
-    partial class CadastroDisciplinas
+    partial class frmCadastroDisciplinas
     {
         /// <summary>
         /// Required designer variable.
@@ -50,13 +50,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDisciplina.Location = new System.Drawing.Point(278, 20);
             this.txtDisciplina.Name = "txtDisciplina";
-            this.txtDisciplina.Size = new System.Drawing.Size(594, 27);
+            this.txtDisciplina.Size = new System.Drawing.Size(594, 32);
             this.txtDisciplina.TabIndex = 5;
             // 
             // btnCadastro
             // 
-            this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCadastro.Location = new System.Drawing.Point(540, 516);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(108, 47);
@@ -76,11 +75,11 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // CadastroDisciplinas
+            // frmCadastroDisciplinas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(922, 587);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastro);
@@ -89,7 +88,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximumSize = new System.Drawing.Size(1000, 700);
             this.MinimumSize = new System.Drawing.Size(916, 574);
-            this.Name = "CadastroDisciplinas";
+            this.Name = "frmCadastroDisciplinas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroCursos";
             this.Load += new System.EventHandler(this.CadastroCursos_Load);

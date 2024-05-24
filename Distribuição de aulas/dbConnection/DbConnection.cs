@@ -13,7 +13,7 @@ namespace Distribuição_de_aulas.dbConnection
 
         public DbConnection()
         {
-            var connectionString = "Server=localhost;Port=5432;Database=GerenciamentoSalas;User Id=postgres;Password=Matias122;";
+            var connectionString = "Server=localhost;Port=5432;Database=GerenciamentoSalas;User Id=postgres;Password=1234;";
 
             Connection = new NpgsqlConnection(connectionString);
             Connection.Open();

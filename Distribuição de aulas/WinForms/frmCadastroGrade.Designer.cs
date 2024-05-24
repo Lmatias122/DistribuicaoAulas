@@ -1,6 +1,6 @@
 ﻿namespace Distribuição_de_aulas
 {
-    partial class CadastroGrade
+    partial class frmCadastroGrade
     {
         /// <summary>
         /// Required designer variable.
@@ -56,7 +56,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.Location = new System.Drawing.Point(278, 20);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(594, 27);
+            this.txtNome.Size = new System.Drawing.Size(594, 32);
             this.txtNome.TabIndex = 5;
             // 
             // lblSemestre
@@ -79,8 +79,7 @@
             // 
             // btnCadastro
             // 
-            this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCadastro.Location = new System.Drawing.Point(540, 516);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(108, 47);
@@ -116,7 +115,7 @@
             this.cmbSemestre.Location = new System.Drawing.Point(278, 84);
             this.cmbSemestre.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSemestre.Name = "cmbSemestre";
-            this.cmbSemestre.Size = new System.Drawing.Size(594, 27);
+            this.cmbSemestre.Size = new System.Drawing.Size(594, 32);
             this.cmbSemestre.TabIndex = 14;
             // 
             // cmbGradeC
@@ -131,7 +130,7 @@
             this.cmbGradeC.Location = new System.Drawing.Point(278, 154);
             this.cmbGradeC.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGradeC.Name = "cmbGradeC";
-            this.cmbGradeC.Size = new System.Drawing.Size(594, 27);
+            this.cmbGradeC.Size = new System.Drawing.Size(594, 32);
             this.cmbGradeC.TabIndex = 15;
             // 
             // lblCurso
@@ -155,14 +154,14 @@
             this.cmbCurso.Location = new System.Drawing.Point(278, 227);
             this.cmbCurso.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCurso.Name = "cmbCurso";
-            this.cmbCurso.Size = new System.Drawing.Size(594, 27);
+            this.cmbCurso.Size = new System.Drawing.Size(594, 32);
             this.cmbCurso.TabIndex = 16;
             // 
-            // CadastroGrade1
+            // frmCadastroGrade
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(922, 587);
             this.Controls.Add(this.cmbCurso);
             this.Controls.Add(this.cmbGradeC);
@@ -177,9 +176,9 @@
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximumSize = new System.Drawing.Size(1000, 700);
             this.MinimumSize = new System.Drawing.Size(916, 574);
-            this.Name = "CadastroGrade1";
+            this.Name = "frmCadastroGrade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CadastroCursos";
+            this.Text = "CadastroGradeC";
             this.Load += new System.EventHandler(this.CadastroCursos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

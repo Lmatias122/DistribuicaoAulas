@@ -21,16 +21,16 @@ namespace Distribuição_de_aulas
         {
             frmLogin f = new frmLogin();
 
-            while (cadastroUsuario.UsuarioLogado == null){
-                Visible = false;
-                f.ShowDialog();
+            //while (cadastroUsuario.UsuarioLogado == null){
+            //    Visible = false;
+            //    f.ShowDialog();
 
-                if (frmLogin.Cancelar)
-                {
-                    Application.Exit();
-                    return;
-                }
-            }
+            //    if (frmLogin.Cancelar)
+            //    {
+            //        Application.Exit();
+            //        return;
+            //    }
+            //}
 
             Visible = true;
         }
@@ -45,55 +45,55 @@ namespace Distribuição_de_aulas
 
         private void cadastrarDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroDisciplinas disciplinas = new CadastroDisciplinas();
+            frmCadastroDisciplinas disciplinas = new frmCadastroDisciplinas();
             disciplinas.Show();
         }
 
         private void cadastrarCursosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroCursos cursos = new CadastroCursos();
+            frmCadastroCursos cursos = new frmCadastroCursos();
             cursos.Show();
         }
 
         private void cadastrarGradesCurricularesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroGrade grade= new CadastroGrade();
+            frmCadastroGrade grade= new frmCadastroGrade();
             grade.Show();
         }
 
         private void cadastrarUsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cadastrousuarios usuarios = new Cadastrousuarios();
+            frmCadastrousuarios usuarios = new frmCadastrousuarios();
             usuarios.Show();
         }
 
         private void consultaDeDisciplinasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultaDisciplinas disciplinas = new ConsultaDisciplinas();
+            frmConsultaDisciplinas disciplinas = new frmConsultaDisciplinas();
             disciplinas.Show();
         }
 
         private void consultaDeCursosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultaCursos cursos = new ConsultaCursos();
+            frmConsultaCursos cursos = new frmConsultaCursos();
             cursos.Show();
         }
 
         private void consultaDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultaUsuarios usuarios = new ConsultaUsuarios();
+            frmConsultaUsuarios usuarios = new frmConsultaUsuarios();
             usuarios.Show();
         }
 
         private void consultaDeGradescurricularesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultaGrade grade = new ConsultaGrade();
+            frmConsultaGrade grade = new frmConsultaGrade();
             grade.Show();
         }
 
         private void consultaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ConsultaDistribuicao distribuicao = new ConsultaDistribuicao();
+            frmConsultaDistribuicao distribuicao = new frmConsultaDistribuicao();
             distribuicao.Show();
         }
 

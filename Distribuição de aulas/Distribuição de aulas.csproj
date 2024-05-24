@@ -112,60 +112,60 @@
   <ItemGroup>
     <Compile Include="dbConnection\DbConnection.cs" />
     <Compile Include="dbConnection\DbBLL.cs" />
-    <Compile Include="WinForms\CadastroGrade.cs">
+    <Compile Include="WinForms\frmCadastroGrade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\CadastroGrade.Designer.cs">
-      <DependentUpon>CadastroGrade.cs</DependentUpon>
+    <Compile Include="WinForms\frmCadastroGrade.Designer.cs">
+      <DependentUpon>frmCadastroGrade.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\CadastroDisciplinas.cs">
+    <Compile Include="WinForms\frmCadastroDisciplinas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\CadastroDisciplinas.Designer.cs">
-      <DependentUpon>CadastroDisciplinas.cs</DependentUpon>
+    <Compile Include="WinForms\frmCadastroDisciplinas.Designer.cs">
+      <DependentUpon>frmCadastroDisciplinas.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\CadastroCursos.cs">
+    <Compile Include="WinForms\frmCadastroCursos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\CadastroCursos.Designer.cs">
-      <DependentUpon>CadastroCursos.cs</DependentUpon>
+    <Compile Include="WinForms\frmCadastroCursos.Designer.cs">
+      <DependentUpon>frmCadastroCursos.cs</DependentUpon>
     </Compile>
     <Compile Include="cadastroUsuario.cs" />
-    <Compile Include="WinForms\Cadastrousuarios.cs">
+    <Compile Include="WinForms\frmCadastrousuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\Cadastrousuarios.Designer.cs">
-      <DependentUpon>Cadastrousuarios.cs</DependentUpon>
+    <Compile Include="WinForms\frmCadastrousuarios.Designer.cs">
+      <DependentUpon>frmCadastrousuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\ConsultaCursos.cs">
+    <Compile Include="WinForms\frmConsultaCursos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\ConsultaCursos.Designer.cs">
-      <DependentUpon>ConsultaCursos.cs</DependentUpon>
+    <Compile Include="WinForms\frmConsultaCursos.Designer.cs">
+      <DependentUpon>frmConsultaCursos.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\ConsultaDisciplinas.cs">
+    <Compile Include="WinForms\frmConsultaDisciplinas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\ConsultaDisciplinas.Designer.cs">
-      <DependentUpon>ConsultaDisciplinas.cs</DependentUpon>
+    <Compile Include="WinForms\frmConsultaDisciplinas.Designer.cs">
+      <DependentUpon>frmConsultaDisciplinas.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\ConsultaDistribuicao.cs">
+    <Compile Include="WinForms\frmConsultaDistribuicao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\ConsultaDistribuicao.Designer.cs">
-      <DependentUpon>ConsultaDistribuicao.cs</DependentUpon>
+    <Compile Include="WinForms\frmConsultaDistribuicao.Designer.cs">
+      <DependentUpon>frmConsultaDistribuicao.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\ConsultaGrade.cs">
+    <Compile Include="WinForms\frmConsultaGrade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\ConsultaGrade.Designer.cs">
-      <DependentUpon>ConsultaGrade.cs</DependentUpon>
+    <Compile Include="WinForms\frmConsultaGrade.Designer.cs">
+      <DependentUpon>frmConsultaGrade.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\ConsultaUsuarios.cs">
+    <Compile Include="WinForms\frmConsultaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\ConsultaUsuarios.Designer.cs">
-      <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
+    <Compile Include="WinForms\frmConsultaUsuarios.Designer.cs">
+      <DependentUpon>frmConsultaUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="WinForms\frmMain.cs">
       <SubType>Form</SubType>
@@ -181,17 +181,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="WinForms\CadastroGrade.resx">
-      <DependentUpon>CadastroGrade.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\frmCadastroGrade.resx">
+      <DependentUpon>frmCadastroGrade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\CadastroDisciplinas.resx">
-      <DependentUpon>CadastroDisciplinas.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\frmCadastroDisciplinas.resx">
+      <DependentUpon>frmCadastroDisciplinas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\CadastroCursos.resx">
-      <DependentUpon>CadastroCursos.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\frmCadastroCursos.resx">
+      <DependentUpon>frmCadastroCursos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\Cadastrousuarios.resx">
-      <DependentUpon>Cadastrousuarios.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\frmCadastrousuarios.resx">
+      <DependentUpon>frmCadastrousuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\frmConsultaCursos.resx">
+      <DependentUpon>frmConsultaCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\frmConsultaDisciplinas.resx">
+      <DependentUpon>frmConsultaDisciplinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\frmConsultaDistribuicao.resx">
+      <DependentUpon>frmConsultaDistribuicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\frmConsultaGrade.resx">
+      <DependentUpon>frmConsultaGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\frmConsultaUsuarios.resx">
+      <DependentUpon>frmConsultaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
