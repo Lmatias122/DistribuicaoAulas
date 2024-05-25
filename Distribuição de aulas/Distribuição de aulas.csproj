@@ -110,8 +110,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dbConnection\DbConnection.cs" />
-    <Compile Include="dbConnection\DbBLL.cs" />
     <Compile Include="WinForms\frmCadastroGrade.cs">
       <SubType>Form</SubType>
     </Compile>

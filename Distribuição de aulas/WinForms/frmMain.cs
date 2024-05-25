@@ -21,16 +21,17 @@ namespace Distribuição_de_aulas
         {
             frmLogin f = new frmLogin();
 
-            //while (cadastroUsuario.UsuarioLogado == null){
-            //    Visible = false;
-            //    f.ShowDialog();
+            while (cadastroUsuario.UsuarioLogado == null)
+            {
+                Visible = false;
+                f.ShowDialog();
 
-            //    if (frmLogin.Cancelar)
-            //    {
-            //        Application.Exit();
-            //        return;
-            //    }
-            //}
+                if (frmLogin.Cancelar)
+                {
+                    Application.Exit();
+                    return;
+                }
+            }
 
             Visible = true;
         }
