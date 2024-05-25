@@ -240,10 +240,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Distribuicao.DataAccess\Distribuicao.DataAccess.csproj">
+      <Project>{798f11d3-204e-43a5-8d23-56aba83f447f}</Project>
+      <Name>Distribuicao.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Distribuicao.DataModels\Distribuicao.DataModels.csproj">
       <Project>{CE263690-2E6C-4D1B-B512-2EC5AB744380}</Project>
       <Name>Distribuicao.DataModels</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

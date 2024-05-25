@@ -13,31 +13,18 @@ namespace Distribuição_de_aulas
     public class cadastroUsuario
     {
 
-        private static Usuario[] usuarios =
+        private static UsuarioModel[] usuarios =
             {
-            new Usuario() {nomeusuario="",senha = ""}
+            new UsuarioModel() {nomeusuario="",senha = ""}
             };
 
-        private static Usuario _UserLogado = null;
+        private static UsuarioModel _UserLogado = null;
 
-        public static Usuario UsuarioLogado
+        public static UsuarioModel UsuarioLogado
         {
             get { return _UserLogado; }
             set { _UserLogado = value; }
         }
 
-        public static bool Login(string email, string senha)
-        {
-            foreach(Usuario usuario in usuarios)
-            {
-                if(usuario.nomeusuario == email && usuario.senha == senha)
-                {
-                    UsuarioLogado = usuario;
-                    return true;
-                }               
-
-            }
-            return false;
-        }
     }
 }

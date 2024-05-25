@@ -1,4 +1,6 @@
-﻿using Distribuição_de_aulas.dbConnection;
+﻿using Distribuicao.DataModels;
+using Distribuicao.DataAccess;
+using Distribuição_de_aulas.dbConnection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,23 +26,27 @@ namespace Distribuição_de_aulas
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string nome = txtNome.Text;
-            string senha = txtSenha.Text;
-
-             if (DbBLL.Login(nome, senha))
+            try
             {
-                Close();
+                string nome = txtNome.Text;
+                string senha = txtSenha.Text;
+
+                if (Login(nome, senha))
+                {
+                    
+
+                    Close();
+                }
+                else
+                {
+                    throw new Exception("Usuario ou senha incorreto!");                   
+                }
 
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Usuario ou senha incorreto!");
+                MessageBox.Show(ex.Message);
             }
-
-            
-           
-
-              
 
         }
 
@@ -50,17 +56,78 @@ namespace Distribuição_de_aulas
             Close();
         }
 
+        //private void btnAddUser_Click(object sender, EventArgs e)
+        //{
+        //    string nome = txtNome.Text;
+        //    string senha = txtSenha.Text;           
+        //    UsuarioModel usuario = new UsuarioModel() { nomeusuario = nome, senha = senha };
+
+        //    var teste = UsuarioQuery.Add(usuario);
+
+        //    if (teste)
+        //    {
+        //        MessageBox.Show("Usuario Adicionado com sucesso");
+
+        //        Login(nome, senha);
+        //    }
+        //}
+
         private void checkSenha_CheckedChanged(object sender, EventArgs e)
         {
-            if(txtSenha.PasswordChar == '*')
+            try
             {
-                txtSenha.PasswordChar = default;
-            }
-            else
+                if (txtSenha.PasswordChar == '*')
+                {
+                    txtSenha.PasswordChar = default;
+                }
+                else
+                {
+                    txtSenha.PasswordChar = '*';
+                }
+            }catch(Exception ex)
             {
-                txtSenha.PasswordChar = '*';
-
+                MessageBox.Show(ex.Message);
             }
         }
+
+        public static bool Login(string nome, string senha)
+        {
+            UsuarioModel usuario = new UsuarioModel() { nomeusuario = nome, senha =senha };
+
+            try
+            {
+                //var teste = UsuarioQuery.Getall();
+                var user = UsuarioQuery.GetUserLogin(usuario);
+                if (user != null)
+                {
+                    if (nome == user.nomeusuario && senha == user.senha)
+                    {
+                        cadastroUsuario.UsuarioLogado = user;
+                        var cargo = user.cargo;
+                         
+                        switch (cargo)
+                        {
+                            case (ECargos)0:  break;
+                            case (ECargos)1: break;
+                            case (ECargos)2: break;
+
+                        }
+                       
+                        return true;
+                    }
+                }
+
+              
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+       
     }
 }
