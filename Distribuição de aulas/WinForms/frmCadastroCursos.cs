@@ -18,37 +18,56 @@ namespace Distribuição_de_aulas
         public frmCadastroCursos()
         {
             InitializeComponent();
+
+            cmbCoordenador.DisplayMember = nameof(Tuple<string, UsuarioModel>.Item1);
+            cmbCoordenador.ValueMember = nameof(Tuple<string, UsuarioModel>.Item1);
+
         }
 
         private void CadastroCursos_Load(object sender, EventArgs e)
         {
-            var teste = UsuarioQuery.GetCoord();
+            //var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);
+
+           var teste = new List<UsuarioModel>()
+            {
+               new UsuarioModel() {
+                nomeusuario = "teste",
+                cargo = ECargos.Coordenador,
+                senha = "teste",
+            },
+           new UsuarioModel()
+           {
+               nomeusuario = "abc",
+                cargo = ECargos.Coordenador,
+                senha = "123",
+           } 
+           };
+
 
             foreach(var coord in teste)
             {
-                cmbCoordenador.Items.Add(coord.nomeusuario);                
+                cmbCoordenador.Items.Add(new Tuple<string,UsuarioModel>(coord.nomeusuario,coord)); 
+                
             }
         }
 
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var nome = txtNome.Text;
-                var coordenador = cmbCoordenador.SelectedItem.ToString();
-                var idusuario = 0;
-                var periodo = "";
 
-                var teste = UsuarioQuery.GetCoord();
+            
+            var nome = txtNome.Text;
+            var coordenador = cmbCoordenador.SelectedValue as Tuple<string, UsuarioModel>;
+            var idusuario = coordenador.Item2.idusuario;;
+            var periodo = "";
 
-                foreach (var coord in teste)
-                {
-                    if (coord.nomeusuario == coordenador)
-                    {
-                        idusuario = coord.idusuario;
-                    }
-                }
+           
+
+            // var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);            
+
+            
+
+
 
                 CursoModel model = new CursoModel()
                 {
