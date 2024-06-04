@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Distribuicao.DataModels
+﻿namespace Distribuicao.DataModels
 {
-    internal class DisciplinaModel
+    public class DisciplinaModel
     {
+        public int idDisciplinas {  get; set; }
+        public string nomeDisciplina { get; set; }
+        public int idusuario { get; set; }
+        public string idCurso { get; set;}
     }
 }

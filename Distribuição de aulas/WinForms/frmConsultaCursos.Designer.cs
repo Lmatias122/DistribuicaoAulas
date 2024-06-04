@@ -92,6 +92,7 @@
             this.Name = "frmConsultaCursos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaCursos";
+            this.Load += new System.EventHandler(this.frmConsultaCursos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblSemestre = new System.Windows.Forms.Label();
             this.lblGradeC = new System.Windows.Forms.Label();
             this.btnCadastro = new System.Windows.Forms.Button();
@@ -38,31 +36,14 @@
             this.cmbGradeC = new System.Windows.Forms.ComboBox();
             this.lblCurso = new System.Windows.Forms.Label();
             this.cmbCurso = new System.Windows.Forms.ComboBox();
+            this.cmbUsuario = new System.Windows.Forms.ComboBox();
+            this.lblProfessor = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblNome
-            // 
-            this.lblNome.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(4, 17);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(138, 37);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.Location = new System.Drawing.Point(278, 20);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(594, 32);
-            this.txtNome.TabIndex = 5;
             // 
             // lblSemestre
             // 
             this.lblSemestre.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemestre.Location = new System.Drawing.Point(4, 78);
+            this.lblSemestre.Location = new System.Drawing.Point(4, 80);
             this.lblSemestre.Name = "lblSemestre";
             this.lblSemestre.Size = new System.Drawing.Size(132, 42);
             this.lblSemestre.TabIndex = 6;
@@ -71,7 +52,7 @@
             // lblGradeC
             // 
             this.lblGradeC.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGradeC.Location = new System.Drawing.Point(4, 144);
+            this.lblGradeC.Location = new System.Drawing.Point(4, 151);
             this.lblGradeC.Name = "lblGradeC";
             this.lblGradeC.Size = new System.Drawing.Size(138, 37);
             this.lblGradeC.TabIndex = 8;
@@ -82,7 +63,7 @@
             this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCadastro.Location = new System.Drawing.Point(540, 516);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(108, 47);
+            this.btnCadastro.Size = new System.Drawing.Size(120, 47);
             this.btnCadastro.TabIndex = 12;
             this.btnCadastro.Text = "Cadastrar";
             this.btnCadastro.UseVisualStyleBackColor = true;
@@ -112,7 +93,7 @@
             "3",
             "4",
             "5"});
-            this.cmbSemestre.Location = new System.Drawing.Point(278, 84);
+            this.cmbSemestre.Location = new System.Drawing.Point(278, 76);
             this.cmbSemestre.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSemestre.Name = "cmbSemestre";
             this.cmbSemestre.Size = new System.Drawing.Size(594, 32);
@@ -127,7 +108,7 @@
             this.cmbGradeC.Items.AddRange(new object[] {
             "disciplina 1",
             "disciplina 2"});
-            this.cmbGradeC.Location = new System.Drawing.Point(278, 154);
+            this.cmbGradeC.Location = new System.Drawing.Point(278, 147);
             this.cmbGradeC.Margin = new System.Windows.Forms.Padding(4);
             this.cmbGradeC.Name = "cmbGradeC";
             this.cmbGradeC.Size = new System.Drawing.Size(594, 32);
@@ -136,7 +117,7 @@
             // lblCurso
             // 
             this.lblCurso.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.Location = new System.Drawing.Point(4, 216);
+            this.lblCurso.Location = new System.Drawing.Point(4, 17);
             this.lblCurso.Name = "lblCurso";
             this.lblCurso.Size = new System.Drawing.Size(132, 38);
             this.lblCurso.TabIndex = 4;
@@ -151,11 +132,28 @@
             this.cmbCurso.Items.AddRange(new object[] {
             "Tecnologia Ánalise e Desenvolvimento de Sistemas",
             "Engenharia de Produção"});
-            this.cmbCurso.Location = new System.Drawing.Point(278, 227);
+            this.cmbCurso.Location = new System.Drawing.Point(278, 13);
             this.cmbCurso.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.Size = new System.Drawing.Size(594, 32);
             this.cmbCurso.TabIndex = 16;
+            // 
+            // cmbUsuario
+            // 
+            this.cmbUsuario.FormattingEnabled = true;
+            this.cmbUsuario.Location = new System.Drawing.Point(278, 211);
+            this.cmbUsuario.Name = "cmbUsuario";
+            this.cmbUsuario.Size = new System.Drawing.Size(594, 32);
+            this.cmbUsuario.TabIndex = 18;
+            // 
+            // lblProfessor
+            // 
+            this.lblProfessor.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfessor.Location = new System.Drawing.Point(4, 215);
+            this.lblProfessor.Name = "lblProfessor";
+            this.lblProfessor.Size = new System.Drawing.Size(138, 37);
+            this.lblProfessor.TabIndex = 17;
+            this.lblProfessor.Text = "Professor";
             // 
             // frmCadastroGrade
             // 
@@ -163,6 +161,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(922, 587);
+            this.Controls.Add(this.cmbUsuario);
+            this.Controls.Add(this.lblProfessor);
             this.Controls.Add(this.cmbCurso);
             this.Controls.Add(this.cmbGradeC);
             this.Controls.Add(this.cmbSemestre);
@@ -170,9 +170,7 @@
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.lblGradeC);
             this.Controls.Add(this.lblSemestre);
-            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblCurso);
-            this.Controls.Add(this.lblNome);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximumSize = new System.Drawing.Size(1000, 700);
             this.MinimumSize = new System.Drawing.Size(916, 574);
@@ -181,14 +179,10 @@
             this.Text = "CadastroGradeC";
             this.Load += new System.EventHandler(this.CadastroCursos_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblSemestre;
         private System.Windows.Forms.Label lblGradeC;
         private System.Windows.Forms.Button btnCadastro;
@@ -197,5 +191,7 @@
         private System.Windows.Forms.ComboBox cmbGradeC;
         private System.Windows.Forms.Label lblCurso;
         private System.Windows.Forms.ComboBox cmbCurso;
+        private System.Windows.Forms.ComboBox cmbUsuario;
+        private System.Windows.Forms.Label lblProfessor;
     }
 }

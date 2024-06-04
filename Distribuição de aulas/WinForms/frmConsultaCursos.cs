@@ -21,5 +21,10 @@ namespace Distribuição_de_aulas
         {
             this.Close();
         }
+
+        private void frmConsultaCursos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
