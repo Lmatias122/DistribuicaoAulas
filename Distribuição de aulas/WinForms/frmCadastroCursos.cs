@@ -33,32 +33,46 @@ namespace Distribuição_de_aulas
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            var nome = txtNome.Text;
-            var coordenador = cmbCoordenador.SelectedItem.ToString();
-            var idusuario = 0;
-            var periodo = "";
-
-            var teste = UsuarioQuery.GetCoord();            
-
-            foreach (var coord in teste)
+            try
             {
-                if (coord.nomeusuario == coordenador)
+                var nome = txtNome.Text;
+                var coordenador = cmbCoordenador.SelectedItem.ToString();
+                var idusuario = 0;
+                var periodo = "";
+
+                var teste = UsuarioQuery.GetCoord();
+
+                foreach (var coord in teste)
                 {
-                    idusuario = coord.idusuario;
+                    if (coord.nomeusuario == coordenador)
+                    {
+                        idusuario = coord.idusuario;
+                    }
                 }
-            }
 
-            CursoModel model = new CursoModel()
+                CursoModel model = new CursoModel()
+                {
+                    idusuario = idusuario,
+                    nomecurso = nome,
+                    periodo = periodo
+                };
+
+                var curso = CursoQuery.Add(model);
+
+                if (curso)
+                {
+                    MessageBox.Show("Curso cadastrado com sucesso!");
+                }
+                else
+                {
+                    throw new Exception("Erro ao cadastrar curso");
+                }
+
+                this.Close();
+            }catch (Exception ex)
             {
-               idusuario = idusuario,
-                nomecurso = nome,
-                periodo = periodo
-            };
-
-            var curso = CursoQuery.Add(model);
-
-
-            this.Close();
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
