@@ -26,46 +26,47 @@ namespace Distribuição_de_aulas
 
         private void CadastroCursos_Load(object sender, EventArgs e)
         {
-            //var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);
+            var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);
 
-           var teste = new List<UsuarioModel>()
+           // var teste = new List<UsuarioModel>()
+           // {
+           //    new UsuarioModel() {
+           //     nomeusuario = "teste",
+           //     cargo = ECargos.Coordenador,
+           //     senha = "teste",
+           // },
+           //new UsuarioModel()
+           //{
+           //    nomeusuario = "abc",
+           //     cargo = ECargos.Coordenador,
+           //     senha = "123",
+           //}
+           //};
+
+
+            foreach (var coord in teste)
             {
-               new UsuarioModel() {
-                nomeusuario = "teste",
-                cargo = ECargos.Coordenador,
-                senha = "teste",
-            },
-           new UsuarioModel()
-           {
-               nomeusuario = "abc",
-                cargo = ECargos.Coordenador,
-                senha = "123",
-           } 
-           };
+                cmbCoordenador.Items.Add(new Tuple<string, UsuarioModel>(coord.nomeusuario, coord));
 
-
-            foreach(var coord in teste)
-            {
-                cmbCoordenador.Items.Add(new Tuple<string,UsuarioModel>(coord.nomeusuario,coord)); 
-                
             }
         }
 
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
+            try
+            {
 
-            
-            var nome = txtNome.Text;
-            var coordenador = cmbCoordenador.SelectedValue as Tuple<string, UsuarioModel>;
-            var idusuario = coordenador.Item2.idusuario;;
-            var periodo = "";
+                var nome = txtNome.Text;
+                var coordenador = cmbCoordenador.SelectedValue as Tuple<string, UsuarioModel>;
+                var idusuario = coordenador.Item2.idusuario; ;
+                var periodo = "";
 
-           
 
-            // var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);            
 
-            
+                // var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);            
+
+
 
 
 
@@ -88,7 +89,8 @@ namespace Distribuição_de_aulas
                 }
 
                 this.Close();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
