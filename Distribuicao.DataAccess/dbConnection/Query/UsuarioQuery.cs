@@ -16,8 +16,8 @@ namespace Distribuição_de_aulas.dbConnection
             var conn = new DbConnection();
                 
             var query = @"INSERT INTO public.usuarios(
-	                        nomeusuario, senha)
-	                    VALUES (@nomeusuario, @senha);";
+	                        nomeusuario, senha,cargo,disp_dia,disp_hora)
+	                    VALUES (@nomeusuario, @senha,@cargo,@disp_dia,@disp_hora);";
 
 
             var result = conn.Connection.Execute(sql:query,param:usuario);
