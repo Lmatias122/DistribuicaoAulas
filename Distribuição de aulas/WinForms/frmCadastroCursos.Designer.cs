@@ -65,7 +65,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.Location = new System.Drawing.Point(278, 20);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(579, 32);
+            this.txtNome.Size = new System.Drawing.Size(579, 27);
             this.txtNome.TabIndex = 5;
             // 
             // lblCoordenador
@@ -108,7 +108,7 @@
             this.cmbCoordenador.Location = new System.Drawing.Point(278, 84);
             this.cmbCoordenador.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCoordenador.Name = "cmbCoordenador";
-            this.cmbCoordenador.Size = new System.Drawing.Size(579, 32);
+            this.cmbCoordenador.Size = new System.Drawing.Size(579, 27);
             this.cmbCoordenador.TabIndex = 14;
             // 
             // checkNoite
@@ -120,7 +120,7 @@
             this.checkNoite.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkNoite.Location = new System.Drawing.Point(778, 227);
             this.checkNoite.Name = "checkNoite";
-            this.checkNoite.Size = new System.Drawing.Size(79, 28);
+            this.checkNoite.Size = new System.Drawing.Size(65, 23);
             this.checkNoite.TabIndex = 38;
             this.checkNoite.Text = "Noite";
             this.checkNoite.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             this.checkTarde.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkTarde.Location = new System.Drawing.Point(540, 225);
             this.checkTarde.Name = "checkTarde";
-            this.checkTarde.Size = new System.Drawing.Size(84, 28);
+            this.checkTarde.Size = new System.Drawing.Size(69, 23);
             this.checkTarde.TabIndex = 36;
             this.checkTarde.Text = "Tarde";
             this.checkTarde.UseVisualStyleBackColor = true;
@@ -148,14 +148,14 @@
             this.checkManha.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkManha.Location = new System.Drawing.Point(278, 225);
             this.checkManha.Name = "checkManha";
-            this.checkManha.Size = new System.Drawing.Size(91, 28);
+            this.checkManha.Size = new System.Drawing.Size(74, 23);
             this.checkManha.TabIndex = 37;
             this.checkManha.Text = "Manhã";
             this.checkManha.UseVisualStyleBackColor = true;
             // 
             // frmCadastroCursos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(922, 587);

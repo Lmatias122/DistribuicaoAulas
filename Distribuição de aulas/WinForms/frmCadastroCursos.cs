@@ -26,7 +26,7 @@ namespace Distribuição_de_aulas
 
             foreach(var coord in teste)
             {
-                cmbCoordenador.Items.Add(coord.nomeusuario);
+                cmbCoordenador.Items.Add(coord.nomeusuario);                
             }
         }
 
@@ -34,16 +34,30 @@ namespace Distribuição_de_aulas
         private void btnCadastro_Click(object sender, EventArgs e)
         {
             var nome = txtNome.Text;
-            var coord = cmbCoordenador.SelectedItem;
+            var coordenador = cmbCoordenador.SelectedItem.ToString();
+            var idusuario = 0;
             var periodo = "";
+
+            var teste = UsuarioQuery.GetCoord();            
+
+            foreach (var coord in teste)
+            {
+                if (coord.nomeusuario == coordenador)
+                {
+                    idusuario = coord.idusuario;
+                }
+            }
+
             CursoModel model = new CursoModel()
             {
-                idusuario = coord,
+               idusuario = idusuario,
                 nomecurso = nome,
                 periodo = periodo
             };
 
             var curso = CursoQuery.Add(model);
+
+
             this.Close();
         }
 
