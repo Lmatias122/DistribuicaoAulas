@@ -31,12 +31,10 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblPeriodo = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblSemestre = new System.Windows.Forms.Label();
-            this.lblGradeC = new System.Windows.Forms.Label();
+            this.lblCoordenador = new System.Windows.Forms.Label();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.cmbSemestre = new System.Windows.Forms.ComboBox();
-            this.cmbGradeC = new System.Windows.Forms.ComboBox();
+            this.cmbCoordenador = new System.Windows.Forms.ComboBox();
             this.checkNoite = new System.Windows.Forms.CheckBox();
             this.checkTarde = new System.Windows.Forms.CheckBox();
             this.checkManha = new System.Windows.Forms.CheckBox();
@@ -70,23 +68,14 @@
             this.txtNome.Size = new System.Drawing.Size(579, 32);
             this.txtNome.TabIndex = 5;
             // 
-            // lblSemestre
+            // lblCoordenador
             // 
-            this.lblSemestre.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemestre.Location = new System.Drawing.Point(4, 78);
-            this.lblSemestre.Name = "lblSemestre";
-            this.lblSemestre.Size = new System.Drawing.Size(132, 42);
-            this.lblSemestre.TabIndex = 6;
-            this.lblSemestre.Text = "Semestre";
-            // 
-            // lblGradeC
-            // 
-            this.lblGradeC.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGradeC.Location = new System.Drawing.Point(4, 144);
-            this.lblGradeC.Name = "lblGradeC";
-            this.lblGradeC.Size = new System.Drawing.Size(224, 51);
-            this.lblGradeC.TabIndex = 8;
-            this.lblGradeC.Text = "Grade-Curricular";
+            this.lblCoordenador.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoordenador.Location = new System.Drawing.Point(4, 78);
+            this.lblCoordenador.Name = "lblCoordenador";
+            this.lblCoordenador.Size = new System.Drawing.Size(153, 42);
+            this.lblCoordenador.TabIndex = 6;
+            this.lblCoordenador.Text = "Coordenador";
             // 
             // btnCadastro
             // 
@@ -110,39 +99,17 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // cmbSemestre
+            // cmbCoordenador
             // 
-            this.cmbSemestre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cmbCoordenador.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbSemestre.FormattingEnabled = true;
-            this.cmbSemestre.Items.AddRange(new object[] {
-            "Selecione o Semestre",
-            "1 ",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cmbSemestre.Location = new System.Drawing.Point(278, 84);
-            this.cmbSemestre.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbSemestre.Name = "cmbSemestre";
-            this.cmbSemestre.Size = new System.Drawing.Size(579, 32);
-            this.cmbSemestre.TabIndex = 14;
-            // 
-            // cmbGradeC
-            // 
-            this.cmbGradeC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbGradeC.FormattingEnabled = true;
-            this.cmbGradeC.Items.AddRange(new object[] {
-            "Tecnologia Ánalise e Desenvolvimento de Sistemas",
-            "Engenharia de Produção"});
-            this.cmbGradeC.Location = new System.Drawing.Point(278, 154);
-            this.cmbGradeC.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbGradeC.Name = "cmbGradeC";
-            this.cmbGradeC.Size = new System.Drawing.Size(579, 32);
-            this.cmbGradeC.TabIndex = 15;
+            this.cmbCoordenador.FormattingEnabled = true;
+            this.cmbCoordenador.Location = new System.Drawing.Point(278, 84);
+            this.cmbCoordenador.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbCoordenador.Name = "cmbCoordenador";
+            this.cmbCoordenador.Size = new System.Drawing.Size(579, 32);
+            this.cmbCoordenador.TabIndex = 14;
             // 
             // checkNoite
             // 
@@ -195,12 +162,10 @@
             this.Controls.Add(this.checkNoite);
             this.Controls.Add(this.checkTarde);
             this.Controls.Add(this.checkManha);
-            this.Controls.Add(this.cmbGradeC);
-            this.Controls.Add(this.cmbSemestre);
+            this.Controls.Add(this.cmbCoordenador);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastro);
-            this.Controls.Add(this.lblGradeC);
-            this.Controls.Add(this.lblSemestre);
+            this.Controls.Add(this.lblCoordenador);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblPeriodo);
             this.Controls.Add(this.lblNome);
@@ -221,12 +186,10 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblPeriodo;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblSemestre;
-        private System.Windows.Forms.Label lblGradeC;
+        private System.Windows.Forms.Label lblCoordenador;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.ComboBox cmbSemestre;
-        private System.Windows.Forms.ComboBox cmbGradeC;
+        private System.Windows.Forms.ComboBox cmbCoordenador;
         private System.Windows.Forms.CheckBox checkNoite;
         private System.Windows.Forms.CheckBox checkTarde;
         private System.Windows.Forms.CheckBox checkManha;
