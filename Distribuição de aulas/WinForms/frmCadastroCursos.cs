@@ -22,7 +22,7 @@ namespace Distribuição_de_aulas
 
         private void CadastroCursos_Load(object sender, EventArgs e)
         {
-            var teste = UsuarioQuery.GetCoord();
+            var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);
 
             foreach(var coord in teste)
             {
@@ -38,7 +38,7 @@ namespace Distribuição_de_aulas
             var idusuario = 0;
             var periodo = "";
 
-            var teste = UsuarioQuery.GetCoord();            
+            var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);            
 
             foreach (var coord in teste)
             {

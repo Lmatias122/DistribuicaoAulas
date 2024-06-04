@@ -52,11 +52,11 @@ namespace Distribuição_de_aulas.dbConnection
             return user;   
         }
 
-        public static List<UsuarioModel> GetCoord()
+        public static List<UsuarioModel> GetCargo(ECargos cargo)
         {
             var conn = new DbConnection();
 
-            var query = @"SELECT * FROM usuarios WHERE cargo=1";
+            var query = String.Format( @"SELECT * FROM usuarios WHERE cargo={0}",(long)cargo);
 
             var curso = conn.Connection.Query<UsuarioModel>(sql: query);
 

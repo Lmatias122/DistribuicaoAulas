@@ -8,8 +8,8 @@ namespace Distribuicao.DataModels
         public string nomeusuario { get; set; }
         public string senha { get; set; }
         public ECargos cargo { get; set; }
-        public EDispDia disp_dia { get; set; }
-        public EdispHora disp_hora { get; set; }
+        public string disp_dia { get; set; }
+        public string disp_hora { get; set; }
 
     }
 }
