@@ -18,33 +18,55 @@ namespace Distribuição_de_aulas
         public frmCadastroCursos()
         {
             InitializeComponent();
+
+            cmbCoordenador.DisplayMember = nameof(Tuple<string, UsuarioModel>.Item1);
+            cmbCoordenador.ValueMember = nameof(Tuple<string, UsuarioModel>.Item1);
+
         }
 
         private void CadastroCursos_Load(object sender, EventArgs e)
         {
-            var teste = UsuarioQuery.GetCoord();
+            var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);
 
-            foreach(var coord in teste)
+            foreach (var coord in teste)
             {
-                cmbCoordenador.Items.Add(coord.nomeusuario);
+                cmbCoordenador.Items.Add(new Tuple<string, UsuarioModel>(coord.nomeusuario, coord));
+
             }
         }
 
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            var nome = txtNome.Text;
-            var coord = cmbCoordenador.SelectedItem;
-            var periodo = "";
-            CursoModel model = new CursoModel()
+            try
             {
-                idusuario = coord,
-                nomecurso = nome,
-                periodo = periodo
-            };
+                var nome = txtNome.Text;
+                var coordenador = cmbCoordenador.SelectedItem as Tuple<string, UsuarioModel>;               
+                var idusuario = coordenador.Item2.idusuario; 
 
-            var curso = CursoQuery.Add(model);
-            this.Close();
+                CursoModel model = new CursoModel()
+                {
+                    idusuario = idusuario,
+                    nomecurso = nome
+                };
+
+                var curso = CursoQuery.Add(model);
+
+                if (curso)
+                {
+                    MessageBox.Show("Curso cadastrado com sucesso!");
+                }
+                else
+                {
+                    throw new Exception("Erro ao cadastrar curso");
+                }
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

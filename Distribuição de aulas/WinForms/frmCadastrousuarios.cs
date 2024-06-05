@@ -20,19 +20,22 @@ namespace Distribuição_de_aulas
             InitializeComponent();
         }
         private void frmCadastrousuarios_Load(object sender, EventArgs e)
-        {   
-
-            checkDisp_dia.Items.AddRange(Enum.GetNames(typeof(EDispDia)));
-            checkDisp_Hora.Items.AddRange(Enum.GetNames(typeof(EdispHora)));
-
-            cmbCargo.Items.AddRange(Enum.GetNames(typeof(ECargos)));
-          //  cmbDisp_dia.Items.AddRange(Enum.GetNames(typeof(EDispDia)));
-          //  cmbDisp_hora.Items.AddRange(Enum.GetNames(typeof(EdispHora)));
-        }
-        private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+
+                checkDisp_dia.Items.AddRange(Enum.GetNames(typeof(EDispDia)));
+                checkDisp_Hora.Items.AddRange(Enum.GetNames(typeof(EdispHora)));
+
+                cmbCargo.Items.AddRange(Enum.GetNames(typeof(ECargos)));
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
+        
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -48,16 +51,30 @@ namespace Distribuição_de_aulas
                 var nome = textNome.Text;
                 var senha = textSenha.Text;
                 var cargo = cmbCargo.SelectedIndex;
-                var dispDia = checkDisp_dia.CheckedItems;
-                var dispHora = checkDisp_Hora.CheckedItems;
+                var dispDia_checked = checkDisp_dia.CheckedItems;
+                var dispHora_checked = checkDisp_Hora.CheckedItems;
 
+                var dispHora = "";
+                var dispDia = "";
+
+                foreach (var dias in dispDia_checked) 
+                {
+                    dispDia += dias+", ";
+                }
+
+                foreach(var hora in dispHora_checked)
+                {
+                    dispHora += hora+", ";
+                }
+
+               
                 UsuarioModel usuario = new UsuarioModel()
                 {
                     nomeusuario = nome,
                     senha = senha,
                     cargo = (ECargos)cargo,
-                    //disp_dia = (EDispDia)dispDia,
-                   // disp_hora = (EdispHora)dispHora,
+                    disp_dia = dispDia,
+                    disp_hora = dispHora,
                 };
 
                 var user = UsuarioQuery.Add(usuario);
