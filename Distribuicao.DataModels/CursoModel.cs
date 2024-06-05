@@ -2,6 +2,7 @@
 {
     public class CursoModel
     {
+        public int idcurso {  get; set; }
 
         public string nomecurso {  get; set; }
               

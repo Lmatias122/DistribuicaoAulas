@@ -5,6 +5,6 @@
         public int idDisciplinas {  get; set; }
         public string nomeDisciplina { get; set; }
         public int idusuario { get; set; }
-        public string idCurso { get; set;}
+        public int idCurso { get; set;}
     }
 }
