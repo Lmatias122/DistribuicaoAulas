@@ -28,22 +28,6 @@ namespace Distribuição_de_aulas
         {
             var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);
 
-           // var teste = new List<UsuarioModel>()
-           // {
-           //    new UsuarioModel() {
-           //     nomeusuario = "teste",
-           //     cargo = ECargos.Coordenador,
-           //     senha = "teste",
-           // },
-           //new UsuarioModel()
-           //{
-           //    nomeusuario = "abc",
-           //     cargo = ECargos.Coordenador,
-           //     senha = "123",
-           //}
-           //};
-
-
             foreach (var coord in teste)
             {
                 cmbCoordenador.Items.Add(new Tuple<string, UsuarioModel>(coord.nomeusuario, coord));
@@ -56,25 +40,14 @@ namespace Distribuição_de_aulas
         {
             try
             {
-
                 var nome = txtNome.Text;
-                var coordenador = cmbCoordenador.SelectedValue as Tuple<string, UsuarioModel>;
-                var idusuario = coordenador.Item2.idusuario; ;
-                var periodo = "";
-
-
-
-                // var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);            
-
-
-
-
+                var coordenador = cmbCoordenador.SelectedItem as Tuple<string, UsuarioModel>;               
+                var idusuario = coordenador.Item2.idusuario; 
 
                 CursoModel model = new CursoModel()
                 {
                     idusuario = idusuario,
-                    nomecurso = nome,
-                    periodo = periodo
+                    nomecurso = nome
                 };
 
                 var curso = CursoQuery.Add(model);
