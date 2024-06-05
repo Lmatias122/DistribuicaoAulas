@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Distribuicao.DataAccess.dbConnection.Query;
+using Distribuicao.DataModels;
+using Distribuição_de_aulas.dbConnection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +27,13 @@ namespace Distribuição_de_aulas
 
         private void frmConsultaCursos_Load(object sender, EventArgs e)
         {
+            var cursos = CursoQuery.Getall();
 
+            foreach (var curso in cursos)
+            {
+                dgvCurso.Rows.Add();
+                
+            }
         }
     }
 }
