@@ -24,8 +24,8 @@ namespace Distribuição_de_aulas
             try
             {
 
-                checkDisp_dia.Items.AddRange(Enum.GetNames(typeof(EDispDia)));
-                checkDisp_Hora.Items.AddRange(Enum.GetNames(typeof(EdispHora)));
+                //checkDisp_dia.Items.AddRange(Enum.GetNames(typeof(EDispDia)));
+                //checkDisp_Hora.Items.AddRange(Enum.GetNames(typeof(EdispHora)));
 
                 cmbCargo.Items.AddRange(Enum.GetNames(typeof(ECargos)));
             }
@@ -51,30 +51,29 @@ namespace Distribuição_de_aulas
                 var nome = textNome.Text;
                 var senha = textSenha.Text;
                 var cargo = cmbCargo.SelectedIndex;
-                var dispDia_checked = checkDisp_dia.CheckedItems;
-                var dispHora_checked = checkDisp_Hora.CheckedItems;
 
-                var dispHora = "";
-                var dispDia = "";
+                //var dispDia_checked = checkDisp_dia.CheckedItems;
+                //var dispHora_checked = checkDisp_Hora.CheckedItems;
 
-                foreach (var dias in dispDia_checked) 
-                {
-                    dispDia += dias+", ";
-                }
+                //var dispHora = "";
+                //var dispDia = "";
 
-                foreach(var hora in dispHora_checked)
-                {
-                    dispHora += hora+", ";
-                }
+                //foreach (var dias in dispDia_checked) 
+                //{
+                //    dispDia += dias+", ";
+                //}
+
+                //foreach(var hora in dispHora_checked)
+                //{
+                //    dispHora += hora+", ";
+                //}
 
                
                 UsuarioModel usuario = new UsuarioModel()
                 {
                     nomeusuario = nome,
                     senha = senha,
-                    cargo = (ECargos)cargo,
-                    disp_dia = dispDia,
-                    disp_hora = dispHora,
+                    cargo = (ECargos)cargo
                 };
 
                 var user = UsuarioQuery.Add(usuario);

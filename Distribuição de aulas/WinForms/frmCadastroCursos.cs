@@ -42,7 +42,7 @@ namespace Distribuição_de_aulas
             {
                 var nome = txtNome.Text;
                 var coordenador = cmbCoordenador.SelectedItem as Tuple<string, UsuarioModel>;               
-                var idusuario = coordenador.Item2.idusuario; 
+                var idusuario = coordenador.Item2.idUsuario; 
 
                 CursoModel model = new CursoModel()
                 {

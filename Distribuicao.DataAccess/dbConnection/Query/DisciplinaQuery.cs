@@ -17,8 +17,8 @@ namespace Distribuicao.DataAccess.dbConnection.Query
             var conn = new DbConnection();
 
             var query = @"INSERT INTO public.disciplinas(
-                            nomeDisciplina, idusuario, idCurso)
-                            VALUES (@nomeDisciplina, @idusuario, @idCurso);";
+                            nomeDisciplina, idusuario,idMatriz_Curricular,semestre,diaSemana,dispAula)
+                            VALUES (@nomeDisciplina, @idusuario,@idMatriz_Curricular,@semestre,@diaSemana,@dispAula);";
 
             var result = conn.Connection.Execute(sql: query, param: disciplina);
 

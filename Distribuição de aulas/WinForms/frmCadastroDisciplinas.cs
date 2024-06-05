@@ -29,13 +29,13 @@ namespace Distribuição_de_aulas
             var nome = txtDisciplina.Text;
             var prof = cmbProf.SelectedItem as Tuple<string, UsuarioModel>;
             var curso = cmbCurso.SelectedItem as Tuple<string, CursoModel>;
-            var idusuario = prof.Item2.idusuario;
+            var idusuario = prof.Item2.idUsuario;
 
             DisciplinaModel model = new DisciplinaModel()
             {
                 idusuario = idusuario,
                 nomeDisciplina = nome,
-                idCurso = curso.Item2.idcurso
+                
             };
             var disciplina = DisciplinaQuery.Add(model);
             
