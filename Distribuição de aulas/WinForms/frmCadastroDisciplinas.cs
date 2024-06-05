@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Distribuicao.DataAccess.dbConnection.Query;
+using Distribuicao.DataModels;
+using Distribuição_de_aulas.dbConnection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,20 +20,35 @@ namespace Distribuição_de_aulas
             InitializeComponent();
         }
 
-        private void CadastroCursos_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-
         private void btnCadastro_Click(object sender, EventArgs e)
         {
+            var nome = txtDisciplina.Text;
+            var prof = cmbProf.SelectedItem;
+            var curso = cmbCurso.SelectedItem;
+
+            DisciplinaModel model = new DisciplinaModel()
+            {
+                idusuario = prof,
+                nomeDisciplina = nome,
+                idcurso = curso
+            };
+            var disciplina = DisciplinaQuery.Add(model);
             this.Close();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void CadastroDisciplinas_Load(object sender, EventArgs e)
+        {
+            var teste = UsuarioQuery.GetProf();
+
+            foreach (var prof in teste) 
+            {
+                cmbProf.Items.Add(prof.nomeusuario);
+            }
         }
     }
 }

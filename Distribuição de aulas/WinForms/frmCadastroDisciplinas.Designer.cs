@@ -34,7 +34,7 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.lblCurso = new System.Windows.Forms.Label();
             this.lblProfessor = new System.Windows.Forms.Label();
-            this.cmbUsuario = new System.Windows.Forms.ComboBox();
+            this.cmbProf = new System.Windows.Forms.ComboBox();
             this.cmbCurso = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -97,13 +97,13 @@
             this.lblProfessor.TabIndex = 15;
             this.lblProfessor.Text = "Professor";
             // 
-            // cmbUsuario
+            // cmbProf
             // 
-            this.cmbUsuario.FormattingEnabled = true;
-            this.cmbUsuario.Location = new System.Drawing.Point(278, 84);
-            this.cmbUsuario.Name = "cmbUsuario";
-            this.cmbUsuario.Size = new System.Drawing.Size(594, 32);
-            this.cmbUsuario.TabIndex = 16;
+            this.cmbProf.FormattingEnabled = true;
+            this.cmbProf.Location = new System.Drawing.Point(278, 84);
+            this.cmbProf.Name = "cmbProf";
+            this.cmbProf.Size = new System.Drawing.Size(594, 32);
+            this.cmbProf.TabIndex = 16;
             // 
             // cmbCurso
             // 
@@ -120,7 +120,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(922, 587);
             this.Controls.Add(this.cmbCurso);
-            this.Controls.Add(this.cmbUsuario);
+            this.Controls.Add(this.cmbProf);
             this.Controls.Add(this.lblProfessor);
             this.Controls.Add(this.lblCurso);
             this.Controls.Add(this.btnVoltar);
@@ -133,7 +133,7 @@
             this.Name = "frmCadastroDisciplinas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroDisciplina";
-            this.Load += new System.EventHandler(this.CadastroCursos_Load);
+            this.Load += new System.EventHandler(this.CadastroDisciplinas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,7 +147,7 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label lblCurso;
         private System.Windows.Forms.Label lblProfessor;
-        private System.Windows.Forms.ComboBox cmbUsuario;
+        private System.Windows.Forms.ComboBox cmbProf;
         private System.Windows.Forms.ComboBox cmbCurso;
     }
 }
