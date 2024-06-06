@@ -58,7 +58,7 @@ namespace Distribuição_de_aulas
 
         private void cadastrarGradesCurricularesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCadastroGrade grade= new frmCadastroGrade();
+            frmCadastroMatriz grade= new frmCadastroMatriz();
             grade.Show();
         }
 
