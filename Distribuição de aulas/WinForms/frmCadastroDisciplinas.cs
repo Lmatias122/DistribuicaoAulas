@@ -35,13 +35,12 @@ namespace Distribuição_de_aulas
                     cmbProf.Items.Add(new Tuple<string, UsuarioModel>(prof.nomeusuario, prof));
                 }
 
-                /*var teste2 = MatrizQuery.Getall();
+                var teste2 = MatrizQuery.Getall();
 
                 foreach (var matriz in teste2)
                 {
                     cmbMatriz.Items.Add(new Tuple<string, MatrizModel>(matriz.nome, matriz));
                 }
-                */
 
                 checkDisp_dia.Items.AddRange(Enum.GetNames(typeof(EDispDia)));
                 checkDisp_Hora.Items.AddRange(Enum.GetNames(typeof(EdispHora)));
@@ -60,7 +59,8 @@ namespace Distribuição_de_aulas
                 var nome = txtDisciplina.Text;
                 var prof = cmbProf.SelectedItem as Tuple<string, UsuarioModel>;
                 var idusuario = prof.Item2.idUsuario;
-                //var idmatriz = cmbMatriz.Item2.idmatriz;
+                var matriz = cmbMatriz.SelectedItem as Tuple<string, MatrizModel>;
+                var idmatriz = matriz.Item2.idMatriz_Curricular;
                 var semestre = txtSemestre.Text;
                 var diaSemana = checkDisp_dia.CheckedItems;
                 var horario = checkDisp_Hora.CheckedItems;
@@ -97,24 +97,44 @@ namespace Distribuição_de_aulas
                     }
                 }
 
+
+
+
                 DisciplinaModel model = new DisciplinaModel()
                 {
                     idusuario = idusuario,
-                    idMatriz_Curricular = 2,
+                    idMatriz_Curricular = idmatriz,
                     nomeDisciplina = nome,
                     semestre = semestre,
                     diaSemana = dispDia,
                     dispAula = dispHora,
 
                 };
-                var disciplina = DisciplinaQuery.Add(model);
-                if (disciplina)
+
+
+
+                if (VerificaDisp(model))
                 {
-                    MessageBox.Show("Disciplina cadastrada com sucesso");
+                    if (!VerificaConflito(model))
+                    {
+                        var disciplina = DisciplinaQuery.Add(model);
+                        if (disciplina)
+                        {
+                            MessageBox.Show("Disciplina cadastrada com sucesso");
+                        }
+                        else
+                        {
+                            throw new Exception("Ocorreu um erro!");
+                        }
+                    }
+                    else 
+                    {
+                        //Caso exista conflitos no horario cadastrado na disciplina com o horario do professor selecionado, o codigo nao deve permitir o cadastro da disciplina;
+                    }
                 }
-                else
+                else 
                 {
-                    throw new Exception("Ocorreu um erro!");
+                    //Caso exista conflitos no horario cadastrado na disciplina com o horario do professor selecionado, o codigo nao deve permitir o cadastro da disciplina;
                 }
 
             }
@@ -122,6 +142,47 @@ namespace Distribuição_de_aulas
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+
+        public bool VerificaDisp(DisciplinaModel disciplina)
+        {
+            DispProfModel prof = new DispProfModel()
+            {
+                diaSemana = disciplina.diaSemana,
+                dispAula = disciplina.dispAula,
+                idProfessor = disciplina.idusuario
+            };
+
+            var Prof = DispProfQuery.GetDisp(prof);
+
+            if (Prof == null)
+            {
+                return false;
+                // Caso retorne false, significa que nao existe registro desse usuario dentro do banco de disciplinas, ou seja, o usuario pode ser cadastrado.
+            }
+            
+            //Caso tenha disponibilidade o retorno deve ser TRUE
+
+            return true;
+        }
+
+        public bool VerificaConflito(DisciplinaModel disciplina)
+        {
+            var disp = DisciplinaQuery.GetDisp(disciplina);
+
+            if (disp == null)
+            {
+                return false;
+            }
+
+            //Verificar na tabela de disciplina se existe algum professor com o id, dia da semana e dipaula ja cadastrados com os dados informados. 
+            // 
+            //Caso exista, retornar TRUE e indicar que existe conflito, um erro deve aparecer e impedir o cadastro;
+
+            //Caso tenha conflitos o retorno deve ser TRUE
+
+            return true; 
         }
 
 

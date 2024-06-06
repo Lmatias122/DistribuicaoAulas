@@ -34,5 +34,21 @@ namespace Distribuicao.DataAccess.dbConnection.Query
 
             return curso.ToList();
         }
+
+
+        public static DisciplinaModel GetDisp(DisciplinaModel disciplina)
+        {
+            var conn = new DbConnection();
+
+            var query = @"SELECT *
+                        FROM disciplinas
+                        WHERE idusuario = @idusuario AND dispAula = @dispAula and diaSemana = @diaSemana";
+
+
+
+            var disp = conn.Connection.Query<DisciplinaModel>(sql: query, param: disciplina).FirstOrDefault();
+
+            return disp;
+        }
     }
 }
