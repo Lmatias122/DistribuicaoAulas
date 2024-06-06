@@ -34,6 +34,8 @@
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.cmbCoordenador = new System.Windows.Forms.ComboBox();
+            this.txtDur = new System.Windows.Forms.TextBox();
+            this.lblDur = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNome
@@ -52,7 +54,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.Location = new System.Drawing.Point(278, 20);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(579, 27);
+            this.txtNome.Size = new System.Drawing.Size(579, 32);
             this.txtNome.TabIndex = 5;
             // 
             // lblCoordenador
@@ -95,15 +97,36 @@
             this.cmbCoordenador.Location = new System.Drawing.Point(278, 84);
             this.cmbCoordenador.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCoordenador.Name = "cmbCoordenador";
-            this.cmbCoordenador.Size = new System.Drawing.Size(579, 27);
+            this.cmbCoordenador.Size = new System.Drawing.Size(579, 32);
             this.cmbCoordenador.TabIndex = 14;
+            // 
+            // txtDur
+            // 
+            this.txtDur.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDur.Location = new System.Drawing.Point(278, 157);
+            this.txtDur.Name = "txtDur";
+            this.txtDur.Size = new System.Drawing.Size(579, 32);
+            this.txtDur.TabIndex = 16;
+            // 
+            // lblDur
+            // 
+            this.lblDur.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDur.Location = new System.Drawing.Point(4, 154);
+            this.lblDur.Name = "lblDur";
+            this.lblDur.Size = new System.Drawing.Size(203, 37);
+            this.lblDur.TabIndex = 15;
+            this.lblDur.Text = "Duração do Curso ";
             // 
             // frmCadastroCursos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(922, 587);
+            this.Controls.Add(this.txtDur);
+            this.Controls.Add(this.lblDur);
             this.Controls.Add(this.cmbCoordenador);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastro);
@@ -130,5 +153,7 @@
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.ComboBox cmbCoordenador;
+        private System.Windows.Forms.TextBox txtDur;
+        private System.Windows.Forms.Label lblDur;
     }
 }
