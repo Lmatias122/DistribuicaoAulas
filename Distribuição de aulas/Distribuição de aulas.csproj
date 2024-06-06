@@ -110,17 +110,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WinForms\frmCadastroDispProf.cs">
+    <Compile Include="WinForms\frmCadastroMatriz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\frmCadastroDispProf.Designer.cs">
-      <DependentUpon>frmCadastroDispProf.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WinForms\frmCadastroGrade.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WinForms\frmCadastroGrade.Designer.cs">
-      <DependentUpon>frmCadastroGrade.cs</DependentUpon>
+    <Compile Include="WinForms\frmCadastroMatriz.Designer.cs">
+      <DependentUpon>frmCadastroMatriz.cs</DependentUpon>
     </Compile>
     <Compile Include="WinForms\frmCadastroDisciplinas.cs">
       <SubType>Form</SubType>
@@ -185,11 +179,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="WinForms\frmCadastroDispProf.resx">
-      <DependentUpon>frmCadastroDispProf.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\frmCadastroGrade.resx">
-      <DependentUpon>frmCadastroGrade.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\frmCadastroMatriz.resx">
+      <DependentUpon>frmCadastroMatriz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\frmCadastroDisciplinas.resx">
       <DependentUpon>frmCadastroDisciplinas.cs</DependentUpon>

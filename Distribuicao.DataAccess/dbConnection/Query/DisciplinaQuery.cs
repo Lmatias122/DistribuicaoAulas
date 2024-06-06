@@ -22,7 +22,7 @@ namespace Distribuicao.DataAccess.dbConnection.Query
 
             var result = conn.Connection.Execute(sql: query, param: disciplina);
 
-            return result == 2;
+            return result == 1;
         }
         public static List<DisciplinaModel>Getall()
         {

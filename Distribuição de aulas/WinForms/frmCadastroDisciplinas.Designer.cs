@@ -35,7 +35,13 @@
             this.lblCurso = new System.Windows.Forms.Label();
             this.lblProfessor = new System.Windows.Forms.Label();
             this.cmbProf = new System.Windows.Forms.ComboBox();
-            this.cmbCurso = new System.Windows.Forms.ComboBox();
+            this.cmbMatriz = new System.Windows.Forms.ComboBox();
+            this.lblSemestre = new System.Windows.Forms.Label();
+            this.txtSemestre = new System.Windows.Forms.TextBox();
+            this.lblDiaSemana = new System.Windows.Forms.Label();
+            this.lblDispAula = new System.Windows.Forms.Label();
+            this.checkDisp_dia = new System.Windows.Forms.CheckedListBox();
+            this.checkDisp_Hora = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // lblDisciplina
@@ -82,11 +88,11 @@
             // lblCurso
             // 
             this.lblCurso.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.Location = new System.Drawing.Point(4, 144);
+            this.lblCurso.Location = new System.Drawing.Point(4, 149);
             this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(138, 37);
+            this.lblCurso.Size = new System.Drawing.Size(189, 37);
             this.lblCurso.TabIndex = 14;
-            this.lblCurso.Text = "Curso";
+            this.lblCurso.Text = "Matriz Curricular";
             // 
             // lblProfessor
             // 
@@ -105,13 +111,66 @@
             this.cmbProf.Size = new System.Drawing.Size(594, 32);
             this.cmbProf.TabIndex = 16;
             // 
-            // cmbCurso
+            // cmbMatriz
             // 
-            this.cmbCurso.FormattingEnabled = true;
-            this.cmbCurso.Location = new System.Drawing.Point(278, 154);
-            this.cmbCurso.Name = "cmbCurso";
-            this.cmbCurso.Size = new System.Drawing.Size(594, 32);
-            this.cmbCurso.TabIndex = 19;
+            this.cmbMatriz.FormattingEnabled = true;
+            this.cmbMatriz.Location = new System.Drawing.Point(278, 154);
+            this.cmbMatriz.Name = "cmbMatriz";
+            this.cmbMatriz.Size = new System.Drawing.Size(594, 32);
+            this.cmbMatriz.TabIndex = 19;
+            // 
+            // lblSemestre
+            // 
+            this.lblSemestre.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSemestre.Location = new System.Drawing.Point(4, 221);
+            this.lblSemestre.Name = "lblSemestre";
+            this.lblSemestre.Size = new System.Drawing.Size(189, 37);
+            this.lblSemestre.TabIndex = 20;
+            this.lblSemestre.Text = "Semestre";
+            // 
+            // txtSemestre
+            // 
+            this.txtSemestre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSemestre.Location = new System.Drawing.Point(278, 226);
+            this.txtSemestre.Name = "txtSemestre";
+            this.txtSemestre.Size = new System.Drawing.Size(594, 32);
+            this.txtSemestre.TabIndex = 21;
+            // 
+            // lblDiaSemana
+            // 
+            this.lblDiaSemana.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiaSemana.Location = new System.Drawing.Point(273, 289);
+            this.lblDiaSemana.Name = "lblDiaSemana";
+            this.lblDiaSemana.Size = new System.Drawing.Size(189, 37);
+            this.lblDiaSemana.TabIndex = 22;
+            this.lblDiaSemana.Text = "Dia da semana";
+            // 
+            // lblDispAula
+            // 
+            this.lblDispAula.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDispAula.Location = new System.Drawing.Point(668, 289);
+            this.lblDispAula.Name = "lblDispAula";
+            this.lblDispAula.Size = new System.Drawing.Size(204, 37);
+            this.lblDispAula.TabIndex = 24;
+            this.lblDispAula.Text = "Horário disponível";
+            // 
+            // checkDisp_dia
+            // 
+            this.checkDisp_dia.FormattingEnabled = true;
+            this.checkDisp_dia.Location = new System.Drawing.Point(278, 341);
+            this.checkDisp_dia.Name = "checkDisp_dia";
+            this.checkDisp_dia.Size = new System.Drawing.Size(147, 139);
+            this.checkDisp_dia.TabIndex = 29;
+            // 
+            // checkDisp_Hora
+            // 
+            this.checkDisp_Hora.FormattingEnabled = true;
+            this.checkDisp_Hora.Location = new System.Drawing.Point(673, 341);
+            this.checkDisp_Hora.Name = "checkDisp_Hora";
+            this.checkDisp_Hora.Size = new System.Drawing.Size(199, 58);
+            this.checkDisp_Hora.TabIndex = 30;
             // 
             // frmCadastroDisciplinas
             // 
@@ -119,7 +178,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(922, 587);
-            this.Controls.Add(this.cmbCurso);
+            this.Controls.Add(this.checkDisp_Hora);
+            this.Controls.Add(this.checkDisp_dia);
+            this.Controls.Add(this.lblDispAula);
+            this.Controls.Add(this.lblDiaSemana);
+            this.Controls.Add(this.txtSemestre);
+            this.Controls.Add(this.lblSemestre);
+            this.Controls.Add(this.cmbMatriz);
             this.Controls.Add(this.cmbProf);
             this.Controls.Add(this.lblProfessor);
             this.Controls.Add(this.lblCurso);
@@ -148,6 +213,12 @@
         private System.Windows.Forms.Label lblCurso;
         private System.Windows.Forms.Label lblProfessor;
         private System.Windows.Forms.ComboBox cmbProf;
-        private System.Windows.Forms.ComboBox cmbCurso;
+        private System.Windows.Forms.ComboBox cmbMatriz;
+        private System.Windows.Forms.Label lblSemestre;
+        private System.Windows.Forms.TextBox txtSemestre;
+        private System.Windows.Forms.Label lblDiaSemana;
+        private System.Windows.Forms.Label lblDispAula;
+        private System.Windows.Forms.CheckedListBox checkDisp_dia;
+        private System.Windows.Forms.CheckedListBox checkDisp_Hora;
     }
 }

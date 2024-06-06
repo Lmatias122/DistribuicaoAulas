@@ -8,8 +8,8 @@
         public int idMatriz_Curricular { get; set;}
         public string semestre { get; set; }
 
-        public EDispDia diaSemana { get; set; }
-        public EdispHora dispAula { get; set; }
+        public string diaSemana { get; set; }
+        public string dispAula { get; set; }
 
     }
 }
