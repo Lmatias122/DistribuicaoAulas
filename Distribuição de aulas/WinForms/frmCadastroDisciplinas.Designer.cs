@@ -126,7 +126,7 @@
             // lblDiaSemana
             // 
             this.lblDiaSemana.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaSemana.Location = new System.Drawing.Point(273, 228);
+            this.lblDiaSemana.Location = new System.Drawing.Point(4, 228);
             this.lblDiaSemana.Name = "lblDiaSemana";
             this.lblDiaSemana.Size = new System.Drawing.Size(189, 37);
             this.lblDiaSemana.TabIndex = 22;
@@ -135,7 +135,7 @@
             // lblDispAula
             // 
             this.lblDispAula.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDispAula.Location = new System.Drawing.Point(668, 228);
+            this.lblDispAula.Location = new System.Drawing.Point(4, 404);
             this.lblDispAula.Name = "lblDispAula";
             this.lblDispAula.Size = new System.Drawing.Size(204, 37);
             this.lblDispAula.TabIndex = 24;
@@ -143,18 +143,24 @@
             // 
             // checkDisp_dia
             // 
+            this.checkDisp_dia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkDisp_dia.FormattingEnabled = true;
-            this.checkDisp_dia.Location = new System.Drawing.Point(278, 280);
+            this.checkDisp_dia.Location = new System.Drawing.Point(278, 228);
             this.checkDisp_dia.Name = "checkDisp_dia";
-            this.checkDisp_dia.Size = new System.Drawing.Size(147, 112);
+            this.checkDisp_dia.Size = new System.Drawing.Size(594, 139);
             this.checkDisp_dia.TabIndex = 29;
             // 
             // checkDisp_Hora
             // 
+            this.checkDisp_Hora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkDisp_Hora.FormattingEnabled = true;
-            this.checkDisp_Hora.Location = new System.Drawing.Point(673, 280);
+            this.checkDisp_Hora.Location = new System.Drawing.Point(278, 404);
             this.checkDisp_Hora.Name = "checkDisp_Hora";
-            this.checkDisp_Hora.Size = new System.Drawing.Size(199, 31);
+            this.checkDisp_Hora.Size = new System.Drawing.Size(594, 58);
             this.checkDisp_Hora.TabIndex = 30;
             // 
             // frmCadastroDisciplinas
