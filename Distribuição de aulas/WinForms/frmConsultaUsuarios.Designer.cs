@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvCurso = new System.Windows.Forms.DataGridView();
+            this.NomeUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CargoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
-            this.NomeUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CargoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurso)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,24 +49,39 @@
             this.dgvCurso.Size = new System.Drawing.Size(668, 337);
             this.dgvCurso.TabIndex = 8;
             // 
+            // NomeUsuario
+            // 
+            this.NomeUsuario.HeaderText = "Nome Usuario";
+            this.NomeUsuario.MinimumWidth = 6;
+            this.NomeUsuario.Name = "NomeUsuario";
+            this.NomeUsuario.Width = 400;
+            // 
+            // CargoUsuario
+            // 
+            this.CargoUsuario.HeaderText = "Cargo Usuario";
+            this.CargoUsuario.MinimumWidth = 6;
+            this.CargoUsuario.Name = "CargoUsuario";
+            this.CargoUsuario.Width = 200;
+            // 
             // btnVoltar
             // 
             this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVoltar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.Location = new System.Drawing.Point(573, 425);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(78, 38);
             this.btnVoltar.TabIndex = 7;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
             // 
             // btnConsultar
             // 
             this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnConsultar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.Location = new System.Drawing.Point(405, 425);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(90, 38);
             this.btnConsultar.TabIndex = 6;
@@ -85,20 +100,6 @@
             this.lblNome.TabIndex = 5;
             this.lblNome.Text = "Consulta Usuário";
             // 
-            // NomeUsuario
-            // 
-            this.NomeUsuario.HeaderText = "Nome Usuario";
-            this.NomeUsuario.MinimumWidth = 6;
-            this.NomeUsuario.Name = "NomeUsuario";
-            this.NomeUsuario.Width = 400;
-            // 
-            // CargoUsuario
-            // 
-            this.CargoUsuario.HeaderText = "Cargo Usuario";
-            this.CargoUsuario.MinimumWidth = 6;
-            this.CargoUsuario.Name = "CargoUsuario";
-            this.CargoUsuario.Width = 200;
-            // 
             // frmConsultaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,7 +109,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.lblNome);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(754, 576);
             this.MinimumSize = new System.Drawing.Size(691, 474);
             this.Name = "frmConsultaUsuarios";

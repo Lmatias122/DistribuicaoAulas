@@ -49,5 +49,10 @@ namespace Distribuição_de_aulas
 
             }
         }
+
+        private void btnVoltar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
