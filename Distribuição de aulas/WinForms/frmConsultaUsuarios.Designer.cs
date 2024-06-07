@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvCurso = new System.Windows.Forms.DataGridView();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coordenador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
+            this.NomeUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CargoUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurso)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,37 +41,22 @@
             // 
             this.dgvCurso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCurso.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome,
-            this.Coordenador});
-            this.dgvCurso.Location = new System.Drawing.Point(16, 80);
-            this.dgvCurso.Margin = new System.Windows.Forms.Padding(4);
+            this.NomeUsuario,
+            this.CargoUsuario});
+            this.dgvCurso.Location = new System.Drawing.Point(12, 65);
             this.dgvCurso.Name = "dgvCurso";
             this.dgvCurso.RowHeadersWidth = 51;
-            this.dgvCurso.Size = new System.Drawing.Size(891, 415);
+            this.dgvCurso.Size = new System.Drawing.Size(668, 337);
             this.dgvCurso.TabIndex = 8;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.MinimumWidth = 6;
-            this.Nome.Name = "Nome";
-            this.Nome.Width = 400;
-            // 
-            // Coordenador
-            // 
-            this.Coordenador.HeaderText = "CoordenadorCurso";
-            this.Coordenador.MinimumWidth = 6;
-            this.Coordenador.Name = "Coordenador";
-            this.Coordenador.Width = 200;
             // 
             // btnVoltar
             // 
             this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVoltar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(764, 523);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVoltar.Location = new System.Drawing.Point(573, 425);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(104, 47);
+            this.btnVoltar.Size = new System.Drawing.Size(78, 38);
             this.btnVoltar.TabIndex = 7;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -80,35 +65,52 @@
             // 
             this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnConsultar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.Location = new System.Drawing.Point(540, 523);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConsultar.Location = new System.Drawing.Point(405, 425);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(120, 47);
+            this.btnConsultar.Size = new System.Drawing.Size(90, 38);
             this.btnConsultar.TabIndex = 6;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(368, 16);
+            this.lblNome.Location = new System.Drawing.Point(276, 13);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(181, 28);
+            this.lblNome.Size = new System.Drawing.Size(149, 23);
             this.lblNome.TabIndex = 5;
             this.lblNome.Text = "Consulta Usuário";
             // 
+            // NomeUsuario
+            // 
+            this.NomeUsuario.HeaderText = "Nome Usuario";
+            this.NomeUsuario.MinimumWidth = 6;
+            this.NomeUsuario.Name = "NomeUsuario";
+            this.NomeUsuario.Width = 400;
+            // 
+            // CargoUsuario
+            // 
+            this.CargoUsuario.HeaderText = "Cargo Usuario";
+            this.CargoUsuario.MinimumWidth = 6;
+            this.CargoUsuario.Name = "CargoUsuario";
+            this.CargoUsuario.Width = 200;
+            // 
             // frmConsultaUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 587);
+            this.ClientSize = new System.Drawing.Size(692, 477);
             this.Controls.Add(this.dgvCurso);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.lblNome);
-            this.MaximumSize = new System.Drawing.Size(1000, 700);
-            this.MinimumSize = new System.Drawing.Size(916, 574);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(754, 576);
+            this.MinimumSize = new System.Drawing.Size(691, 474);
             this.Name = "frmConsultaUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConsultaUsuarios";
@@ -122,10 +124,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvCurso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coordenador;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CargoUsuario;
     }
 }

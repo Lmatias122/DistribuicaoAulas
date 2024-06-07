@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Distribuição_de_aulas.dbConnection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,28 @@ namespace Distribuição_de_aulas
         private void frmConsultaUsuarios_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            var teste = UsuarioQuery.Getall();
+
+            var i = 0;
+            var teste2 = 0;
+            foreach (var item in teste)
+            {
+                dgvCurso.Rows.Add(item.nomeusuario);
+
+                while (teste2 <= teste.Count)
+                {
+                    dgvCurso.Rows[i].Cells[1].Value = item.cargo;
+
+                    break;
+                }
+                teste2++;
+                i++;
+
+            }
         }
     }
 }
