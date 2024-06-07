@@ -44,20 +44,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textNome.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNome.Location = new System.Drawing.Point(208, 11);
-            this.textNome.Margin = new System.Windows.Forms.Padding(2);
+            this.textNome.Location = new System.Drawing.Point(278, 20);
+            this.textNome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textNome.Name = "textNome";
-            this.textNome.Size = new System.Drawing.Size(435, 27);
+            this.textNome.Size = new System.Drawing.Size(594, 32);
             this.textNome.TabIndex = 27;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(3, 14);
-            this.lblNome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNome.Location = new System.Drawing.Point(4, 17);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(59, 23);
+            this.lblNome.Size = new System.Drawing.Size(70, 28);
             this.lblNome.TabIndex = 25;
             this.lblNome.Text = "Nome";
             // 
@@ -65,10 +65,10 @@
             // 
             this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVoltar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(573, 419);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVoltar.Location = new System.Drawing.Point(764, 516);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(78, 38);
+            this.btnVoltar.Size = new System.Drawing.Size(108, 47);
             this.btnVoltar.TabIndex = 37;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -78,10 +78,10 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(3, 65);
-            this.lblSenha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSenha.Location = new System.Drawing.Point(4, 78);
+            this.lblSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(63, 23);
+            this.lblSenha.Size = new System.Drawing.Size(75, 28);
             this.lblSenha.TabIndex = 41;
             this.lblSenha.Text = "Senha";
             // 
@@ -89,10 +89,10 @@
             // 
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.Location = new System.Drawing.Point(3, 123);
-            this.lblCargo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCargo.Location = new System.Drawing.Point(4, 149);
+            this.lblCargo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(59, 23);
+            this.lblCargo.Size = new System.Drawing.Size(71, 28);
             this.lblCargo.TabIndex = 42;
             this.lblCargo.Text = "Cargo";
             // 
@@ -102,10 +102,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textSenha.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSenha.Location = new System.Drawing.Point(208, 62);
-            this.textSenha.Margin = new System.Windows.Forms.Padding(2);
+            this.textSenha.Location = new System.Drawing.Point(278, 84);
+            this.textSenha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textSenha.Name = "textSenha";
-            this.textSenha.Size = new System.Drawing.Size(435, 27);
+            this.textSenha.Size = new System.Drawing.Size(594, 32);
             this.textSenha.TabIndex = 43;
             // 
             // cmbCargo
@@ -115,20 +115,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbCargo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Location = new System.Drawing.Point(208, 119);
-            this.cmbCargo.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbCargo.Location = new System.Drawing.Point(278, 154);
+            this.cmbCargo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(435, 27);
+            this.cmbCargo.Size = new System.Drawing.Size(594, 32);
             this.cmbCargo.TabIndex = 44;
             // 
             // btnCadastro
             // 
             this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCadastro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastro.Location = new System.Drawing.Point(405, 419);
-            this.btnCadastro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCadastro.Location = new System.Drawing.Point(540, 516);
+            this.btnCadastro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(90, 38);
+            this.btnCadastro.Size = new System.Drawing.Size(120, 47);
             this.btnCadastro.TabIndex = 12;
             this.btnCadastro.Text = "Cadastrar";
             this.btnCadastro.UseVisualStyleBackColor = true;
@@ -136,9 +136,9 @@
             // 
             // frmCadastrousuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 477);
+            this.ClientSize = new System.Drawing.Size(922, 587);
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.cmbCargo);
             this.Controls.Add(this.textSenha);
@@ -147,9 +147,10 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.textNome);
             this.Controls.Add(this.lblNome);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(754, 576);
-            this.MinimumSize = new System.Drawing.Size(691, 474);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximumSize = new System.Drawing.Size(1000, 700);
+            this.MinimumSize = new System.Drawing.Size(916, 574);
             this.Name = "frmCadastrousuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrousuarios";

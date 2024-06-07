@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Distribuição_de_aulas.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,6 +68,12 @@ namespace Distribuição_de_aulas
             frmCadastrousuarios usuarios = new frmCadastrousuarios();
             usuarios.Show();
         }
+
+        private void cadastrarDispProfToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroDispProf disp = new frmCadastroDispProf();
+            disp.Show();
+        }
         private void consultaDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmConsultaUsuarios usuarios = new frmConsultaUsuarios();
@@ -78,6 +85,7 @@ namespace Distribuição_de_aulas
             frmConsultaMatriz grade = new frmConsultaMatriz();
             grade.Show();
         }
+
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
