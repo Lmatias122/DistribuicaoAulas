@@ -25,33 +25,44 @@ namespace Distribuição_de_aulas
 
         private void CadastroCursos_Load(object sender, EventArgs e)
         {
-
-            var teste2 = CursoQuery.Getall();
-
-            foreach (var curso in teste2)
+            try
             {
-                cmbCurso.Items.Add(new Tuple<string, CursoModel>(curso.nomecurso, curso));
-            }
 
+                var teste2 = CursoQuery.Getall();
+
+                foreach (var curso in teste2)
+                {
+                    cmbCurso.Items.Add(new Tuple<string, CursoModel>(curso.nomecurso, curso));
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            var nome = txtMatriz.Text;
-            var curso = cmbCurso.SelectedItem as Tuple<string, CursoModel>;
-            
-            
-            MatrizModel model = new MatrizModel()
+            try
             {
-                idCurso  = curso.Item2.idcurso,
-                nome = nome         
+                var nome = txtMatriz.Text;
+                var curso = cmbCurso.SelectedItem as Tuple<string, CursoModel>;
 
-            };
 
-            var Matriz = MatrizQuery.Add(model);
+                MatrizModel model = new MatrizModel()
+                {
+                    idCurso = curso.Item2.idcurso,
+                    nome = nome
 
-            this.Close();
+                };
+
+                var Matriz = MatrizQuery.Add(model);
+
+                this.Close();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

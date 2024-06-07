@@ -151,42 +151,54 @@ namespace Distribuição_de_aulas
 
         public bool VerificaDisp(DisciplinaModel disciplina)
         {
-            DispProfModel prof = new DispProfModel()
+            try
             {
-                diaSemana = disciplina.diaSemana,
-                dispAula = disciplina.dispAula,
-                idProfessor = disciplina.idusuario
-            };
+                DispProfModel prof = new DispProfModel()
+                {
+                    diaSemana = disciplina.diaSemana,
+                    dispAula = disciplina.dispAula,
+                    idProfessor = disciplina.idusuario
+                };
 
-            var Prof = DispProfQuery.GetDisp(prof);
+                var Prof = DispProfQuery.GetDisp(prof);
 
-            if (Prof == null)
+                if (Prof == null)
+                {
+                    return false;
+                    // Caso retorne false, significa que nao existe registro desse usuario dentro do banco de disciplinas, ou seja, a disciplina nao pode ser cadastrada.
+                }
+
+                //Caso tenha disponibilidade o retorno deve ser TRUE
+
+                return true;
+            }catch(Exception ex)
             {
-                return false;
-                // Caso retorne false, significa que nao existe registro desse usuario dentro do banco de disciplinas, ou seja, a disciplina nao pode ser cadastrada.
+                MessageBox.Show(ex.Message);
             }
-            
-            //Caso tenha disponibilidade o retorno deve ser TRUE
-
-            return true;
         }
+
 
         public bool VerificaConflito(DisciplinaModel disciplina)
         {
-            var disp = DisciplinaQuery.GetDisp(disciplina);
+            try {
+                var disp = DisciplinaQuery.GetDisp(disciplina);
 
-            if (disp == null)
+                if (disp == null)
+                {
+                    return false;
+                }
+
+                //Verificar na tabela de disciplina se existe algum professor com o id, dia da semana e dipaula ja cadastrados com os dados informados. 
+                // 
+                //Caso exista, retornar TRUE e indicar que existe conflito, um erro deve aparecer e impedir o cadastro;
+
+                //Caso tenha conflitos o retorno deve ser TRUE
+
+                return true;
+            }catch(Exception ex)
             {
-                return false;
+                MessageBox.Show(ex.Message);
             }
-
-            //Verificar na tabela de disciplina se existe algum professor com o id, dia da semana e dipaula ja cadastrados com os dados informados. 
-            // 
-            //Caso exista, retornar TRUE e indicar que existe conflito, um erro deve aparecer e impedir o cadastro;
-
-            //Caso tenha conflitos o retorno deve ser TRUE
-
-            return true; 
         }
 
 
