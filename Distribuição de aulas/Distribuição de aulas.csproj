@@ -110,7 +110,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="WinForms\frmCadastroDispProf.cs">
+    <Compile Include="WinForms\frmCadastroDispProf.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="WinForms\frmCadastroDispProf.Designer.cs">
@@ -141,29 +141,11 @@
     <Compile Include="WinForms\frmCadastrousuarios.Designer.cs">
       <DependentUpon>frmCadastrousuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="WinForms\frmConsultaCursos.cs">
+    <Compile Include="WinForms\frmConsultaMatriz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WinForms\frmConsultaCursos.Designer.cs">
-      <DependentUpon>frmConsultaCursos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WinForms\frmConsultaDisciplinas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WinForms\frmConsultaDisciplinas.Designer.cs">
-      <DependentUpon>frmConsultaDisciplinas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WinForms\frmConsultaDistribuicao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WinForms\frmConsultaDistribuicao.Designer.cs">
-      <DependentUpon>frmConsultaDistribuicao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WinForms\frmConsultaGrade.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WinForms\frmConsultaGrade.Designer.cs">
-      <DependentUpon>frmConsultaGrade.cs</DependentUpon>
+    <Compile Include="WinForms\frmConsultaMatriz.Designer.cs">
+      <DependentUpon>frmConsultaMatriz.cs</DependentUpon>
     </Compile>
     <Compile Include="WinForms\frmConsultaUsuarios.cs">
       <SubType>Form</SubType>
@@ -185,7 +167,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-	<EmbeddedResource Include="WinForms\frmCadastroDispProf.resx">
+    <EmbeddedResource Include="WinForms\frmCadastroDispProf.resx">
       <DependentUpon>frmCadastroDispProf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\frmCadastroMatriz.resx">
@@ -200,17 +182,8 @@
     <EmbeddedResource Include="WinForms\frmCadastrousuarios.resx">
       <DependentUpon>frmCadastrousuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\frmConsultaCursos.resx">
-      <DependentUpon>frmConsultaCursos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\frmConsultaDisciplinas.resx">
-      <DependentUpon>frmConsultaDisciplinas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\frmConsultaDistribuicao.resx">
-      <DependentUpon>frmConsultaDistribuicao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WinForms\frmConsultaGrade.resx">
-      <DependentUpon>frmConsultaGrade.cs</DependentUpon>
+    <EmbeddedResource Include="WinForms\frmConsultaMatriz.resx">
+      <DependentUpon>frmConsultaMatriz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForms\frmConsultaUsuarios.resx">
       <DependentUpon>frmConsultaUsuarios.cs</DependentUpon>

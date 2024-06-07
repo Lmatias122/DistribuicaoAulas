@@ -1,5 +1,4 @@
-﻿using Distribuição_de_aulas.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -68,19 +67,6 @@ namespace Distribuição_de_aulas
             frmCadastrousuarios usuarios = new frmCadastrousuarios();
             usuarios.Show();
         }
-
-        private void consultaDeDisciplinasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmConsultaDisciplinas disciplinas = new frmConsultaDisciplinas();
-            disciplinas.Show();
-        }
-
-        private void consultaDeCursosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmConsultaCursos cursos = new frmConsultaCursos();
-            cursos.Show();
-        }
-
         private void consultaDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmConsultaUsuarios usuarios = new frmConsultaUsuarios();
@@ -89,14 +75,8 @@ namespace Distribuição_de_aulas
 
         private void consultaDeGradescurricularesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsultaGrade grade = new frmConsultaGrade();
+            frmConsultaMatriz grade = new frmConsultaMatriz();
             grade.Show();
-        }
-
-        private void consultaDeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmConsultaDistribuicao distribuicao = new frmConsultaDistribuicao();
-            distribuicao.Show();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,10 +84,6 @@ namespace Distribuição_de_aulas
             Dispose();
         }
 
-        private void cadastroDisponibilidadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmCadastroDispProf disp = new frmCadastroDispProf();
-            disp.Show();
-        }
+        
     }
 }

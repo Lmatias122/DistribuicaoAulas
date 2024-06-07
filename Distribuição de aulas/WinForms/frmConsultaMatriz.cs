@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Distribuição_de_aulas
 {
-    public partial class frmConsultaGrade : Form
+    public partial class frmConsultaMatriz : Form
     {
-        public frmConsultaGrade()
+        public frmConsultaMatriz()
         {
             InitializeComponent();
         }

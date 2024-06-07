@@ -122,17 +122,8 @@
             // 
             // consultaDeDisciplinasToolStripMenuItem
             // 
-            this.consultaDeDisciplinasToolStripMenuItem.Name = "consultaDeDisciplinasToolStripMenuItem";
-            this.consultaDeDisciplinasToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.consultaDeDisciplinasToolStripMenuItem.Text = "Consulta de disciplinas";
-            this.consultaDeDisciplinasToolStripMenuItem.Click += new System.EventHandler(this.consultaDeDisciplinasToolStripMenuItem_Click);
-            // 
             // consultaDeCursosToolStripMenuItem
             // 
-            this.consultaDeCursosToolStripMenuItem.Name = "consultaDeCursosToolStripMenuItem";
-            this.consultaDeCursosToolStripMenuItem.Size = new System.Drawing.Size(241, 22);
-            this.consultaDeCursosToolStripMenuItem.Text = "Consulta de cursos";
-            this.consultaDeCursosToolStripMenuItem.Click += new System.EventHandler(this.consultaDeCursosToolStripMenuItem_Click);
             // 
             // consultaDeUsuariosToolStripMenuItem
             // 
@@ -158,11 +149,6 @@
             // 
             // consultaDeToolStripMenuItem
             // 
-            this.consultaDeToolStripMenuItem.Name = "consultaDeToolStripMenuItem";
-            this.consultaDeToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
-            this.consultaDeToolStripMenuItem.Text = "Consulta de distribuição de aulas";
-            this.consultaDeToolStripMenuItem.Click += new System.EventHandler(this.consultaDeToolStripMenuItem_Click);
-            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
@@ -171,11 +157,6 @@
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // cadastroDisponibilidadeToolStripMenuItem
-            // 
-            this.cadastroDisponibilidadeToolStripMenuItem.Name = "cadastroDisponibilidadeToolStripMenuItem";
-            this.cadastroDisponibilidadeToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.cadastroDisponibilidadeToolStripMenuItem.Text = "Cadastro Disponibilidade";
-            this.cadastroDisponibilidadeToolStripMenuItem.Click += new System.EventHandler(this.cadastroDisponibilidadeToolStripMenuItem_Click);
             // 
             // frmMain
             // 

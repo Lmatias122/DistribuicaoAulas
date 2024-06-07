@@ -1,6 +1,6 @@
 ﻿namespace Distribuição_de_aulas
 {
-    partial class frmConsultaGrade
+    partial class frmConsultaMatriz
     {
         /// <summary>
         /// Required designer variable.
