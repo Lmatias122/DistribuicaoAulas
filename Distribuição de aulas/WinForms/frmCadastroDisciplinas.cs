@@ -174,6 +174,7 @@ namespace Distribuição_de_aulas
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return false;
             }
         }
 
@@ -198,6 +199,7 @@ namespace Distribuição_de_aulas
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return true;
             }
         }
 
