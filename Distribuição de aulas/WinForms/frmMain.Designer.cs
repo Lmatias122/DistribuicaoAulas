@@ -67,11 +67,11 @@
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarDToolStripMenuItem,
             this.cadastrarUsuáriosToolStripMenuItem,
+            this.cadastroDisponibilidadeToolStripMenuItem,
             this.cadastrarGradesCurricularesToolStripMenuItem,
             this.cadastrarCursosToolStripMenuItem,
-            this.cadastroDisponibilidadeToolStripMenuItem});
+            this.cadastrarDToolStripMenuItem});
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.cadastrarToolStripMenuItem.Text = "Cadastros";

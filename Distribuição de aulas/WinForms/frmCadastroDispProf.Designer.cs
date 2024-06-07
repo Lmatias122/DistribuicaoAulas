@@ -45,9 +45,9 @@
             this.lblProfessor.Location = new System.Drawing.Point(6, 26);
             this.lblProfessor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProfessor.Name = "lblProfessor";
-            this.lblProfessor.Size = new System.Drawing.Size(119, 24);
+            this.lblProfessor.Size = new System.Drawing.Size(92, 24);
             this.lblProfessor.TabIndex = 1;
-            this.lblProfessor.Text = "ID Professor";
+            this.lblProfessor.Text = "Professor";
             // 
             // lblDiaDisp
             // 
@@ -64,7 +64,7 @@
             // 
             this.lblHoDisp.AutoSize = true;
             this.lblHoDisp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoDisp.Location = new System.Drawing.Point(6, 229);
+            this.lblHoDisp.Location = new System.Drawing.Point(6, 181);
             this.lblHoDisp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHoDisp.Name = "lblHoDisp";
             this.lblHoDisp.Size = new System.Drawing.Size(174, 24);
@@ -117,7 +117,7 @@
             this.cmbProf.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProf.FormattingEnabled = true;
             this.cmbProf.Location = new System.Drawing.Point(221, 18);
-            this.cmbProf.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmbProf.Margin = new System.Windows.Forms.Padding(6);
             this.cmbProf.Name = "cmbProf";
             this.cmbProf.Size = new System.Drawing.Size(688, 32);
             this.cmbProf.TabIndex = 43;
@@ -128,7 +128,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkHoDisp.FormattingEnabled = true;
-            this.checkHoDisp.Location = new System.Drawing.Point(221, 229);
+            this.checkHoDisp.Location = new System.Drawing.Point(221, 181);
             this.checkHoDisp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkHoDisp.Name = "checkHoDisp";
             this.checkHoDisp.Size = new System.Drawing.Size(688, 85);
