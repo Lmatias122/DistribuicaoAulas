@@ -58,7 +58,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDisciplina.Location = new System.Drawing.Point(278, 20);
             this.txtDisciplina.Name = "txtDisciplina";
-            this.txtDisciplina.Size = new System.Drawing.Size(594, 27);
+            this.txtDisciplina.Size = new System.Drawing.Size(594, 32);
             this.txtDisciplina.TabIndex = 5;
             // 
             // btnCadastro
@@ -103,18 +103,24 @@
             // 
             // cmbProf
             // 
+            this.cmbProf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbProf.FormattingEnabled = true;
             this.cmbProf.Location = new System.Drawing.Point(278, 84);
             this.cmbProf.Name = "cmbProf";
-            this.cmbProf.Size = new System.Drawing.Size(594, 27);
+            this.cmbProf.Size = new System.Drawing.Size(594, 32);
             this.cmbProf.TabIndex = 16;
             // 
             // cmbMatriz
             // 
+            this.cmbMatriz.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbMatriz.FormattingEnabled = true;
             this.cmbMatriz.Location = new System.Drawing.Point(278, 154);
             this.cmbMatriz.Name = "cmbMatriz";
-            this.cmbMatriz.Size = new System.Drawing.Size(594, 27);
+            this.cmbMatriz.Size = new System.Drawing.Size(594, 32);
             this.cmbMatriz.TabIndex = 19;
             // 
             // lblDiaSemana
@@ -140,7 +146,7 @@
             this.checkDisp_dia.FormattingEnabled = true;
             this.checkDisp_dia.Location = new System.Drawing.Point(278, 280);
             this.checkDisp_dia.Name = "checkDisp_dia";
-            this.checkDisp_dia.Size = new System.Drawing.Size(147, 136);
+            this.checkDisp_dia.Size = new System.Drawing.Size(147, 112);
             this.checkDisp_dia.TabIndex = 29;
             // 
             // checkDisp_Hora
@@ -148,12 +154,12 @@
             this.checkDisp_Hora.FormattingEnabled = true;
             this.checkDisp_Hora.Location = new System.Drawing.Point(673, 280);
             this.checkDisp_Hora.Name = "checkDisp_Hora";
-            this.checkDisp_Hora.Size = new System.Drawing.Size(199, 48);
+            this.checkDisp_Hora.Size = new System.Drawing.Size(199, 31);
             this.checkDisp_Hora.TabIndex = 30;
             // 
             // frmCadastroDisciplinas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(922, 587);

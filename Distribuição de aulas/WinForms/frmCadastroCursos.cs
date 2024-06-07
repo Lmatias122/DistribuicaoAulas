@@ -26,12 +26,18 @@ namespace Distribuição_de_aulas
 
         private void CadastroCursos_Load(object sender, EventArgs e)
         {
-            var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);
-
-            foreach (var coord in teste)
+            try
             {
-                cmbCoordenador.Items.Add(new Tuple<string, UsuarioModel>(coord.nomeusuario, coord));
+                var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);
 
+                foreach (var coord in teste)
+                {
+                    cmbCoordenador.Items.Add(new Tuple<string, UsuarioModel>(coord.nomeusuario, coord));
+
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

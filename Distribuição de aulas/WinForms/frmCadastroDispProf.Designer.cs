@@ -34,18 +34,18 @@
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.checkDiaDisp = new System.Windows.Forms.CheckedListBox();
-            this.checkHoDisp = new System.Windows.Forms.CheckedListBox();
             this.cmbProf = new System.Windows.Forms.ComboBox();
+            this.checkHoDisp = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // lblProfessor
             // 
             this.lblProfessor.AutoSize = true;
             this.lblProfessor.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfessor.Location = new System.Drawing.Point(3, 14);
-            this.lblProfessor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProfessor.Location = new System.Drawing.Point(6, 26);
+            this.lblProfessor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProfessor.Name = "lblProfessor";
-            this.lblProfessor.Size = new System.Drawing.Size(97, 19);
+            this.lblProfessor.Size = new System.Drawing.Size(119, 24);
             this.lblProfessor.TabIndex = 1;
             this.lblProfessor.Text = "ID Professor";
             // 
@@ -53,10 +53,10 @@
             // 
             this.lblDiaDisp.AutoSize = true;
             this.lblDiaDisp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaDisp.Location = new System.Drawing.Point(28, 96);
-            this.lblDiaDisp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDiaDisp.Location = new System.Drawing.Point(6, 72);
+            this.lblDiaDisp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDiaDisp.Name = "lblDiaDisp";
-            this.lblDiaDisp.Size = new System.Drawing.Size(110, 19);
+            this.lblDiaDisp.Size = new System.Drawing.Size(138, 24);
             this.lblDiaDisp.TabIndex = 4;
             this.lblDiaDisp.Text = "Dia Disponível";
             // 
@@ -64,10 +64,10 @@
             // 
             this.lblHoDisp.AutoSize = true;
             this.lblHoDisp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoDisp.Location = new System.Drawing.Point(333, 96);
-            this.lblHoDisp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHoDisp.Location = new System.Drawing.Point(6, 229);
+            this.lblHoDisp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHoDisp.Name = "lblHoDisp";
-            this.lblHoDisp.Size = new System.Drawing.Size(140, 19);
+            this.lblHoDisp.Size = new System.Drawing.Size(174, 24);
             this.lblHoDisp.TabIndex = 5;
             this.lblHoDisp.Text = "Horário Disponível";
             // 
@@ -75,10 +75,10 @@
             // 
             this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCadastro.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastro.Location = new System.Drawing.Point(410, 381);
-            this.btnCadastro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCadastro.Location = new System.Drawing.Point(540, 516);
+            this.btnCadastro.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(90, 38);
+            this.btnCadastro.Size = new System.Drawing.Size(120, 47);
             this.btnCadastro.TabIndex = 38;
             this.btnCadastro.Text = "Cadastrar";
             this.btnCadastro.UseVisualStyleBackColor = true;
@@ -88,10 +88,10 @@
             // 
             this.btnVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVoltar.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(572, 381);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVoltar.Location = new System.Drawing.Point(764, 516);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(78, 38);
+            this.btnVoltar.Size = new System.Drawing.Size(104, 47);
             this.btnVoltar.TabIndex = 39;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -99,50 +99,60 @@
             // 
             // checkDiaDisp
             // 
+            this.checkDiaDisp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.checkDiaDisp.FormattingEnabled = true;
-            this.checkDiaDisp.Location = new System.Drawing.Point(32, 143);
-            this.checkDiaDisp.Margin = new System.Windows.Forms.Padding(2);
+            this.checkDiaDisp.Location = new System.Drawing.Point(221, 72);
+            this.checkDiaDisp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkDiaDisp.Name = "checkDiaDisp";
-            this.checkDiaDisp.Size = new System.Drawing.Size(106, 64);
+            this.checkDiaDisp.Size = new System.Drawing.Size(688, 85);
             this.checkDiaDisp.TabIndex = 40;
-            // 
-            // checkHoDisp
-            // 
-            this.checkHoDisp.FormattingEnabled = true;
-            this.checkHoDisp.Items.AddRange(new object[] {
-            ""});
-            this.checkHoDisp.Location = new System.Drawing.Point(337, 147);
-            this.checkHoDisp.Margin = new System.Windows.Forms.Padding(2);
-            this.checkHoDisp.Name = "checkHoDisp";
-            this.checkHoDisp.Size = new System.Drawing.Size(136, 64);
-            this.checkHoDisp.TabIndex = 41;
             // 
             // cmbProf
             // 
+            this.cmbProf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbProf.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbProf.FormattingEnabled = true;
-            this.cmbProf.Location = new System.Drawing.Point(121, 11);
+            this.cmbProf.Location = new System.Drawing.Point(221, 18);
+            this.cmbProf.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbProf.Name = "cmbProf";
-            this.cmbProf.Size = new System.Drawing.Size(529, 27);
+            this.cmbProf.Size = new System.Drawing.Size(688, 32);
             this.cmbProf.TabIndex = 43;
+            // 
+            // checkHoDisp
+            // 
+            this.checkHoDisp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkHoDisp.FormattingEnabled = true;
+            this.checkHoDisp.Location = new System.Drawing.Point(221, 229);
+            this.checkHoDisp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.checkHoDisp.Name = "checkHoDisp";
+            this.checkHoDisp.Size = new System.Drawing.Size(688, 85);
+            this.checkHoDisp.TabIndex = 44;
             // 
             // frmCadastroDispProf
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 435);
-            this.Controls.Add(this.cmbProf);
+            this.ClientSize = new System.Drawing.Size(922, 587);
             this.Controls.Add(this.checkHoDisp);
+            this.Controls.Add(this.cmbProf);
             this.Controls.Add(this.checkDiaDisp);
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.lblHoDisp);
             this.Controls.Add(this.lblDiaDisp);
             this.Controls.Add(this.lblProfessor);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(754, 576);
-            this.MinimumSize = new System.Drawing.Size(691, 474);
+            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximumSize = new System.Drawing.Size(1000, 700);
+            this.MinimumSize = new System.Drawing.Size(916, 574);
             this.Name = "frmCadastroDispProf";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastroDispProf";
             this.Load += new System.EventHandler(this.frmCadastroDispProf_Load);
             this.ResumeLayout(false);
@@ -157,7 +167,7 @@
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.CheckedListBox checkDiaDisp;
-        private System.Windows.Forms.CheckedListBox checkHoDisp;
         private System.Windows.Forms.ComboBox cmbProf;
+        private System.Windows.Forms.CheckedListBox checkHoDisp;
     }
 }

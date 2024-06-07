@@ -76,7 +76,7 @@
             this.cmbCurso.Location = new System.Drawing.Point(278, 77);
             this.cmbCurso.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCurso.Name = "cmbCurso";
-            this.cmbCurso.Size = new System.Drawing.Size(594, 27);
+            this.cmbCurso.Size = new System.Drawing.Size(594, 32);
             this.cmbCurso.TabIndex = 16;
             // 
             // label1
@@ -90,14 +90,17 @@
             // 
             // txtMatriz
             // 
+            this.txtMatriz.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMatriz.Location = new System.Drawing.Point(278, 20);
             this.txtMatriz.Name = "txtMatriz";
-            this.txtMatriz.Size = new System.Drawing.Size(594, 27);
+            this.txtMatriz.Size = new System.Drawing.Size(594, 32);
             this.txtMatriz.TabIndex = 18;
             // 
             // frmCadastroMatriz
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(922, 587);

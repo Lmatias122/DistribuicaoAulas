@@ -29,27 +29,33 @@ namespace Distribuição_de_aulas
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            var teste = DisciplinaQuery.GetAllUsername();
-
-            var i = 0;
-            var teste2 = 0;
-            foreach (var item in teste)
+            try
             {
-                dgvMatriz.Rows.Add(item.nomeDisciplina);
+                var teste = DisciplinaQuery.GetAllUsername();
 
-                while (teste2 <= teste.Count)
+                var i = 0;
+                var teste2 = 0;
+                foreach (var item in teste)
                 {
-                    dgvMatriz.Rows[i].Cells[1].Value = item.nomeusuario;
+                    dgvMatriz.Rows.Add(item.nomeDisciplina);
 
-                    dgvMatriz.Rows[i].Cells[2].Value = item.diaSemana;
+                    while (teste2 <= teste.Count)
+                    {
+                        dgvMatriz.Rows[i].Cells[1].Value = item.nomeusuario;
 
-                    dgvMatriz.Rows[i].Cells[3].Value = item.dispAula;
+                        dgvMatriz.Rows[i].Cells[2].Value = item.diaSemana;
 
-                    break;
+                        dgvMatriz.Rows[i].Cells[3].Value = item.dispAula;
+
+                        break;
+                    }
+                    teste2++;
+                    i++;
+
                 }
-                teste2++;
-                i++;
-
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
