@@ -20,6 +20,8 @@ namespace Distribuição_de_aulas
             InitializeComponent();
             cmbProf.DisplayMember = nameof(Tuple<string, UsuarioModel>.Item1);
             cmbProf.ValueMember = nameof(Tuple<string, UsuarioModel>.Item1);
+
+
             cmbMatriz.DisplayMember = nameof(Tuple<string, CursoModel>.Item1);
             cmbMatriz.ValueMember = nameof(Tuple<string, CursoModel>.Item1);
         }
@@ -61,7 +63,6 @@ namespace Distribuição_de_aulas
                 var idusuario = prof.Item2.idUsuario;
                 var matriz = cmbMatriz.SelectedItem as Tuple<string, MatrizModel>;
                 var idmatriz = matriz.Item2.idMatriz_Curricular;
-                var semestre = txtSemestre.Text;
                 var diaSemana = checkDisp_dia.CheckedItems;
                 var horario = checkDisp_Hora.CheckedItems;
 
@@ -105,7 +106,6 @@ namespace Distribuição_de_aulas
                     idusuario = idusuario,
                     idMatriz_Curricular = idmatriz,
                     nomeDisciplina = nome,
-                    semestre = semestre,
                     diaSemana = dispDia,
                     dispAula = dispHora,
 
@@ -121,6 +121,7 @@ namespace Distribuição_de_aulas
                         if (disciplina)
                         {
                             MessageBox.Show("Disciplina cadastrada com sucesso");
+                            this.Close();
                         }
                         else
                         {
@@ -129,11 +130,14 @@ namespace Distribuição_de_aulas
                     }
                     else 
                     {
+                        MessageBox.Show("O professor selecionado nao esta disponivel no periodo solicitado");
+
                         //Caso exista conflitos no horario cadastrado na disciplina com o horario do professor selecionado, o codigo nao deve permitir o cadastro da disciplina;
                     }
                 }
                 else 
                 {
+                    MessageBox.Show("O professor selecionado nao esta disponivel no periodo solicitado");
                     //Caso exista conflitos no horario cadastrado na disciplina com o horario do professor selecionado, o codigo nao deve permitir o cadastro da disciplina;
                 }
 
@@ -159,7 +163,7 @@ namespace Distribuição_de_aulas
             if (Prof == null)
             {
                 return false;
-                // Caso retorne false, significa que nao existe registro desse usuario dentro do banco de disciplinas, ou seja, o usuario pode ser cadastrado.
+                // Caso retorne false, significa que nao existe registro desse usuario dentro do banco de disciplinas, ou seja, a disciplina nao pode ser cadastrada.
             }
             
             //Caso tenha disponibilidade o retorno deve ser TRUE

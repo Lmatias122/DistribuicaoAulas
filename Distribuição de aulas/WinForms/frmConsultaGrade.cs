@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Distribuicao.DataAccess.dbConnection.Query;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,41 @@ namespace Distribuição_de_aulas
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmConsultaGrade_Load(object sender, EventArgs e)
+        {            
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            var teste = DisciplinaQuery.GetAllUsername();
+
+            var i = 0;
+            var teste2 = 0;
+            foreach (var item in teste)
+            {
+                dgvMatriz.Rows.Add(item.nomeDisciplina);
+
+                while (teste2 <= teste.Count)
+                {
+                    dgvMatriz.Rows[i].Cells[1].Value = item.nomeusuario;
+
+                    dgvMatriz.Rows[i].Cells[2].Value = item.diaSemana;
+
+                    dgvMatriz.Rows[i].Cells[3].Value = item.dispAula;
+
+                    break;
+                }
+                teste2++;
+                i++;
+
+            }
+        }
+
+        private void btnVoltar_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

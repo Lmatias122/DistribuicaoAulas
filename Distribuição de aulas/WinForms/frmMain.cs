@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Distribuição_de_aulas.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -103,6 +104,10 @@ namespace Distribuição_de_aulas
             Dispose();
         }
 
-        
+        private void cadastroDisponibilidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroDispProf disp = new frmCadastroDispProf();
+            disp.Show();
+        }
     }
 }

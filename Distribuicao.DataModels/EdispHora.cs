@@ -8,8 +8,8 @@ namespace Distribuicao.DataModels
 {
     public enum EdispHora
     {
-        primeiro,
-        segundo
+        primeiraAula,
+        segundaAula
 
     }
 }

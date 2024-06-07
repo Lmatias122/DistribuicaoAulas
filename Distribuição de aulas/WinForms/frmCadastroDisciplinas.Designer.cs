@@ -36,8 +36,6 @@
             this.lblProfessor = new System.Windows.Forms.Label();
             this.cmbProf = new System.Windows.Forms.ComboBox();
             this.cmbMatriz = new System.Windows.Forms.ComboBox();
-            this.lblSemestre = new System.Windows.Forms.Label();
-            this.txtSemestre = new System.Windows.Forms.TextBox();
             this.lblDiaSemana = new System.Windows.Forms.Label();
             this.lblDispAula = new System.Windows.Forms.Label();
             this.checkDisp_dia = new System.Windows.Forms.CheckedListBox();
@@ -60,7 +58,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDisciplina.Location = new System.Drawing.Point(278, 20);
             this.txtDisciplina.Name = "txtDisciplina";
-            this.txtDisciplina.Size = new System.Drawing.Size(594, 32);
+            this.txtDisciplina.Size = new System.Drawing.Size(594, 27);
             this.txtDisciplina.TabIndex = 5;
             // 
             // btnCadastro
@@ -108,7 +106,7 @@
             this.cmbProf.FormattingEnabled = true;
             this.cmbProf.Location = new System.Drawing.Point(278, 84);
             this.cmbProf.Name = "cmbProf";
-            this.cmbProf.Size = new System.Drawing.Size(594, 32);
+            this.cmbProf.Size = new System.Drawing.Size(594, 27);
             this.cmbProf.TabIndex = 16;
             // 
             // cmbMatriz
@@ -116,32 +114,13 @@
             this.cmbMatriz.FormattingEnabled = true;
             this.cmbMatriz.Location = new System.Drawing.Point(278, 154);
             this.cmbMatriz.Name = "cmbMatriz";
-            this.cmbMatriz.Size = new System.Drawing.Size(594, 32);
+            this.cmbMatriz.Size = new System.Drawing.Size(594, 27);
             this.cmbMatriz.TabIndex = 19;
-            // 
-            // lblSemestre
-            // 
-            this.lblSemestre.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemestre.Location = new System.Drawing.Point(4, 221);
-            this.lblSemestre.Name = "lblSemestre";
-            this.lblSemestre.Size = new System.Drawing.Size(189, 37);
-            this.lblSemestre.TabIndex = 20;
-            this.lblSemestre.Text = "Semestre";
-            // 
-            // txtSemestre
-            // 
-            this.txtSemestre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSemestre.Location = new System.Drawing.Point(278, 226);
-            this.txtSemestre.Name = "txtSemestre";
-            this.txtSemestre.Size = new System.Drawing.Size(594, 32);
-            this.txtSemestre.TabIndex = 21;
             // 
             // lblDiaSemana
             // 
             this.lblDiaSemana.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaSemana.Location = new System.Drawing.Point(273, 289);
+            this.lblDiaSemana.Location = new System.Drawing.Point(273, 228);
             this.lblDiaSemana.Name = "lblDiaSemana";
             this.lblDiaSemana.Size = new System.Drawing.Size(189, 37);
             this.lblDiaSemana.TabIndex = 22;
@@ -150,7 +129,7 @@
             // lblDispAula
             // 
             this.lblDispAula.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDispAula.Location = new System.Drawing.Point(668, 289);
+            this.lblDispAula.Location = new System.Drawing.Point(668, 228);
             this.lblDispAula.Name = "lblDispAula";
             this.lblDispAula.Size = new System.Drawing.Size(204, 37);
             this.lblDispAula.TabIndex = 24;
@@ -159,22 +138,22 @@
             // checkDisp_dia
             // 
             this.checkDisp_dia.FormattingEnabled = true;
-            this.checkDisp_dia.Location = new System.Drawing.Point(278, 341);
+            this.checkDisp_dia.Location = new System.Drawing.Point(278, 280);
             this.checkDisp_dia.Name = "checkDisp_dia";
-            this.checkDisp_dia.Size = new System.Drawing.Size(147, 139);
+            this.checkDisp_dia.Size = new System.Drawing.Size(147, 136);
             this.checkDisp_dia.TabIndex = 29;
             // 
             // checkDisp_Hora
             // 
             this.checkDisp_Hora.FormattingEnabled = true;
-            this.checkDisp_Hora.Location = new System.Drawing.Point(673, 341);
+            this.checkDisp_Hora.Location = new System.Drawing.Point(673, 280);
             this.checkDisp_Hora.Name = "checkDisp_Hora";
-            this.checkDisp_Hora.Size = new System.Drawing.Size(199, 58);
+            this.checkDisp_Hora.Size = new System.Drawing.Size(199, 48);
             this.checkDisp_Hora.TabIndex = 30;
             // 
             // frmCadastroDisciplinas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(922, 587);
@@ -182,8 +161,6 @@
             this.Controls.Add(this.checkDisp_dia);
             this.Controls.Add(this.lblDispAula);
             this.Controls.Add(this.lblDiaSemana);
-            this.Controls.Add(this.txtSemestre);
-            this.Controls.Add(this.lblSemestre);
             this.Controls.Add(this.cmbMatriz);
             this.Controls.Add(this.cmbProf);
             this.Controls.Add(this.lblProfessor);
@@ -214,8 +191,6 @@
         private System.Windows.Forms.Label lblProfessor;
         private System.Windows.Forms.ComboBox cmbProf;
         private System.Windows.Forms.ComboBox cmbMatriz;
-        private System.Windows.Forms.Label lblSemestre;
-        private System.Windows.Forms.TextBox txtSemestre;
         private System.Windows.Forms.Label lblDiaSemana;
         private System.Windows.Forms.Label lblDispAula;
         private System.Windows.Forms.CheckedListBox checkDisp_dia;

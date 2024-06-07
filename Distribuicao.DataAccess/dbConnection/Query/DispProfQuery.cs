@@ -17,7 +17,7 @@ namespace Distribuicao.DataAccess.dbConnection.Query
             var conn = new DbConnection();
 
             var query = @"INSERT INTO public.disp_prof(
-                     idprofessor, diasemana,dispaula)
+                     idprofessor, diasemana,dispaula )
                  VALUES (@idprofessor, @diasemana,@dispaula);";
 
 
@@ -32,8 +32,8 @@ namespace Distribuicao.DataAccess.dbConnection.Query
             var conn = new DbConnection();
 
             var query = @"SELECT *
-                        FROM profDisp
-                        WHERE idUsuario = @idProfessor AND dispAula = @dispAula and diaSemana = @diaSemana";
+                        FROM disp_prof
+                        WHERE idprofessor = @idprofessor AND dispaula = @dispAula and diasemana = @diaSemana";
 
 
       

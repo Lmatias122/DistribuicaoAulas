@@ -18,6 +18,9 @@ namespace Distribuição_de_aulas.WinForms
         public frmCadastroDispProf()
         {
             InitializeComponent();
+
+            cmbProf.DisplayMember = nameof(Tuple<string, UsuarioModel>.Item1);
+            cmbProf.ValueMember = nameof(Tuple<string, UsuarioModel>.Item1);
         }
 
         private void frmCadastroDispProf_Load(object sender, EventArgs e)
@@ -26,6 +29,14 @@ namespace Distribuição_de_aulas.WinForms
             {
                 checkDiaDisp.Items.AddRange(Enum.GetNames(typeof(EDispDia)));
                 checkHoDisp.Items.AddRange(Enum.GetNames(typeof(EdispHora)));
+
+
+                var teste = UsuarioQuery.GetCargo(ECargos.Professor);
+
+                foreach (var prof in teste)
+                {
+                    cmbProf.Items.Add(new Tuple<string, UsuarioModel>(prof.nomeusuario, prof));
+                }
             }
 
             catch (Exception ex)
@@ -44,8 +55,14 @@ namespace Distribuição_de_aulas.WinForms
             try
             {
                 var dispDia_checked = checkDiaDisp.CheckedItems;
-                var dispHora_checked = checkHoDisp.CheckedIndices;
-                var idProf = txtIdProf.Text;
+                var dispHora_checked = checkHoDisp.CheckedItems;
+
+
+               
+
+
+                var profr = cmbProf.SelectedItem as Tuple<string, UsuarioModel>;
+                var idProf = profr.Item2.idUsuario;
 
                 var dispHora = "";
                 var dispDia = "";
@@ -77,7 +94,7 @@ namespace Distribuição_de_aulas.WinForms
 
                 DispProfModel dispprof = new DispProfModel()
                 {
-                    idProfessor = int.Parse(idProf),
+                    idProfessor = idProf,
                     diaSemana = dispDia,
                     dispAula = dispHora
                 };

@@ -44,6 +44,7 @@
             this.aulasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroDisponibilidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,8 @@
             this.cadastrarDToolStripMenuItem,
             this.cadastrarUsuáriosToolStripMenuItem,
             this.cadastrarGradesCurricularesToolStripMenuItem,
-            this.cadastrarCursosToolStripMenuItem});
+            this.cadastrarCursosToolStripMenuItem,
+            this.cadastroDisponibilidadeToolStripMenuItem});
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrarToolStripMenuItem.Text = "Cadastros";
@@ -168,7 +170,14 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // Form1
+            // cadastroDisponibilidadeToolStripMenuItem
+            // 
+            this.cadastroDisponibilidadeToolStripMenuItem.Name = "cadastroDisponibilidadeToolStripMenuItem";
+            this.cadastroDisponibilidadeToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.cadastroDisponibilidadeToolStripMenuItem.Text = "Cadastro Disponibilidade";
+            this.cadastroDisponibilidadeToolStripMenuItem.Click += new System.EventHandler(this.cadastroDisponibilidadeToolStripMenuItem_Click);
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +188,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(1000, 700);
             this.MinimumSize = new System.Drawing.Size(916, 574);
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -207,6 +216,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultaDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaDeGradescurricularesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaDeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastroDisponibilidadeToolStripMenuItem;
     }
 }
 

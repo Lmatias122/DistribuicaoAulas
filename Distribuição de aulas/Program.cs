@@ -16,7 +16,7 @@ namespace Distribuição_de_aulas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCadastrousuarios());
+            Application.Run(new frmMain());
         }
     }
 }

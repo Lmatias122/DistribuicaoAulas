@@ -17,8 +17,8 @@ namespace Distribuicao.DataAccess.dbConnection.Query
             var conn = new DbConnection();
 
             var query = @"INSERT INTO public.disciplinas(
-                            nomeDisciplina, idusuario,idMatriz_Curricular,semestre,diaSemana,dispAula)
-                            VALUES (@nomeDisciplina, @idusuario,@idMatriz_Curricular,@semestre,@diaSemana,@dispAula);";
+                            nomeDisciplina, idusuario,idMatriz_Curricular,diaSemana,dispAula)
+                            VALUES (@nomeDisciplina, @idusuario,@idMatriz_Curricular,@diaSemana,@dispAula);";
 
             var result = conn.Connection.Execute(sql: query, param: disciplina);
 
@@ -35,6 +35,23 @@ namespace Distribuicao.DataAccess.dbConnection.Query
             return curso.ToList();
         }
 
+        public static List<DisciplinaModel> GetAllUsername()
+        {
+            var conn = new DbConnection();
+
+            var query = @"SELECT users.nomeusuario,nomedisciplina,disc.diasemana,disc.dispaula, matriz.nome
+	                        FROM public.disciplinas disc
+	                         INNER JOIN usuarios users
+	                         ON disc.idusuario = users.idusuario
+	                        INNER JOIN matriz_curricular matriz
+	                        ON disc.idmatriz_curricular = matriz.idmatriz_curricular
+					";
+
+            var curso = conn.Connection.Query<DisciplinaModel>(sql: query);
+
+            return curso.ToList();
+        }
+
 
         public static DisciplinaModel GetDisp(DisciplinaModel disciplina)
         {
@@ -42,7 +59,7 @@ namespace Distribuicao.DataAccess.dbConnection.Query
 
             var query = @"SELECT *
                         FROM disciplinas
-                        WHERE idusuario = @idusuario AND dispAula = @dispAula and diaSemana = @diaSemana";
+                        WHERE idusuario = @idusuario AND dispAula = @dispAula and diaSemana = @diaSemana and idmatriz_curricular = @idmatriz_curricular";
 
 
 
