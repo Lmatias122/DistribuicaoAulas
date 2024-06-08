@@ -80,11 +80,11 @@ namespace Distribuição_de_aulas
 
                 if (user)
                 {
-                    MessageBox.Show("Usuario Adicionado com sucesso");
+                    MessageBox.Show("Usuario adicionado com sucesso");
                 }
                 else
                 {
-                    throw new Exception("Ocorreu um erro ao Adicionar o Usuario");
+                    throw new Exception("Ocorreu um erro ao adicionar o usuario");
                 }
             }
             catch (Exception ex)

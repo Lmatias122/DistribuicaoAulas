@@ -39,7 +39,7 @@ namespace Distribuição_de_aulas
                 }
                 else
                 {
-                    throw new Exception("Usuario ou senha incorreto!");                   
+                    throw new Exception("Usuario ou senha incorretos!");                   
                 }
 
             }

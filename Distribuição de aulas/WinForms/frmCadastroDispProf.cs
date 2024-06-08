@@ -103,11 +103,11 @@ namespace Distribuição_de_aulas.WinForms
 
                 if (prof)
                 {
-                    MessageBox.Show("A disponibilidade do professor foi adicionado com sucesso");
+                    MessageBox.Show("A disponibilidade do professor foi adicionada com sucesso");
                 }
                 else
                 {
-                    throw new Exception("Ocorreu um erro ao Adicionar a disponibilidade do professor");
+                    throw new Exception("Ocorreu um erro ao adicionar a disponibilidade do professor");
                 }
             }catch (Exception ex)
             {
