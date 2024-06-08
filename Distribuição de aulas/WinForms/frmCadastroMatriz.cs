@@ -28,9 +28,9 @@ namespace Distribuição_de_aulas
             try
             {
 
-                var teste2 = CursoQuery.Getall();
+                var cursoList = CursoQuery.Getall();
 
-                foreach (var curso in teste2)
+                foreach (var curso in cursoList)
                 {
                     cmbCurso.Items.Add(new Tuple<string, CursoModel>(curso.nomecurso, curso));
                 }

@@ -30,21 +30,21 @@ namespace Distribuição_de_aulas
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            var teste = UsuarioQuery.Getall();
+            var usuarioList= UsuarioQuery.Getall();
 
             var i = 0;
-            var teste2 = 0;
-            foreach (var item in teste)
+            var contagem = 0;
+            foreach (var item in usuarioList)
             {
                 dgvCurso.Rows.Add(item.nomeusuario);
 
-                while (teste2 <= teste.Count)
+                while (contagem <= usuarioList.Count)
                 {
                     dgvCurso.Rows[i].Cells[1].Value = item.cargo;
 
                     break;
                 }
-                teste2++;
+                contagem++;
                 i++;
 
             }

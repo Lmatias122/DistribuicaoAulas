@@ -31,9 +31,9 @@ namespace Distribuição_de_aulas.WinForms
                 checkHoDisp.Items.AddRange(Enum.GetNames(typeof(EdispHora)));
 
 
-                var teste = UsuarioQuery.GetCargo(ECargos.Professor);
+                var profList= UsuarioQuery.GetCargo(ECargos.Professor);
 
-                foreach (var prof in teste)
+                foreach (var prof in profList)
                 {
                     cmbProf.Items.Add(new Tuple<string, UsuarioModel>(prof.nomeusuario, prof));
                 }

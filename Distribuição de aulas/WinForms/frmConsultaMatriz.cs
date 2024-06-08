@@ -31,15 +31,15 @@ namespace Distribuição_de_aulas
         {
             try
             {
-                var teste = DisciplinaQuery.GetAllUsername();
+                var disciplinaList= DisciplinaQuery.GetAllUsername();
 
                 var i = 0;
-                var teste2 = 0;
-                foreach (var item in teste)
+                var contagem = 0;
+                foreach (var item in disciplinaList)
                 {
                     dgvMatriz.Rows.Add(item.nomeDisciplina);
 
-                    while (teste2 <= teste.Count)
+                    while (contagem <= disciplinaList.Count)
                     {
                         dgvMatriz.Rows[i].Cells[1].Value = item.nomeusuario;
 
@@ -49,7 +49,7 @@ namespace Distribuição_de_aulas
 
                         break;
                     }
-                    teste2++;
+                    contagem++;
                     i++;
 
                 }

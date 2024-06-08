@@ -37,14 +37,6 @@ namespace Distribuição_de_aulas
             Visible = true;
         }
 
-
-
-
-
-
-
-
-
         private void cadastrarDToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCadastroDisciplinas disciplinas = new frmCadastroDisciplinas();

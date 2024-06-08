@@ -56,22 +56,6 @@ namespace Distribuição_de_aulas
             Close();
         }
 
-        //private void btnAddUser_Click(object sender, EventArgs e)
-        //{
-        //    string nome = txtNome.Text;
-        //    string senha = txtSenha.Text;           
-        //    UsuarioModel usuario = new UsuarioModel() { nomeusuario = nome, senha = senha };
-
-        //    var teste = UsuarioQuery.Add(usuario);
-
-        //    if (teste)
-        //    {
-        //        MessageBox.Show("Usuario Adicionado com sucesso");
-
-        //        Login(nome, senha);
-        //    }
-        //}
-
         private void checkSenha_CheckedChanged(object sender, EventArgs e)
         {
             try

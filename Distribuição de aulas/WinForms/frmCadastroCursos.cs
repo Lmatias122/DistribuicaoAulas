@@ -28,9 +28,9 @@ namespace Distribuição_de_aulas
         {
             try
             {
-                var teste = UsuarioQuery.GetCargo(ECargos.Coordenador);
+                var coordList = UsuarioQuery.GetCargo(ECargos.Coordenador);
 
-                foreach (var coord in teste)
+                foreach (var coord in coordList)
                 {
                     cmbCoordenador.Items.Add(new Tuple<string, UsuarioModel>(coord.nomeusuario, coord));
 

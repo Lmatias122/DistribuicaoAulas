@@ -23,10 +23,6 @@ namespace Distribuição_de_aulas
         {
             try
             {
-
-                //checkDisp_dia.Items.AddRange(Enum.GetNames(typeof(EDispDia)));
-                //checkDisp_Hora.Items.AddRange(Enum.GetNames(typeof(EdispHora)));
-
                 cmbCargo.Items.AddRange(Enum.GetNames(typeof(ECargos)));
             }
             catch (Exception ex) 
@@ -52,23 +48,6 @@ namespace Distribuição_de_aulas
                 var senha = textSenha.Text;
                 var cargo = cmbCargo.SelectedIndex;
 
-                //var dispDia_checked = checkDisp_dia.CheckedItems;
-                //var dispHora_checked = checkDisp_Hora.CheckedItems;
-
-                //var dispHora = "";
-                //var dispDia = "";
-
-                //foreach (var dias in dispDia_checked) 
-                //{
-                //    dispDia += dias+", ";
-                //}
-
-                //foreach(var hora in dispHora_checked)
-                //{
-                //    dispHora += hora+", ";
-                //}
-
-               
                 UsuarioModel usuario = new UsuarioModel()
                 {
                     nomeusuario = nome,

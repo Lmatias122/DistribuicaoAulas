@@ -30,16 +30,16 @@ namespace Distribuição_de_aulas
         {
             try
             {
-                var teste = UsuarioQuery.GetCargo(ECargos.Professor);
+                var profList = UsuarioQuery.GetCargo(ECargos.Professor);
 
-                foreach (var prof in teste)
+                foreach (var prof in profList)
                 {
                     cmbProf.Items.Add(new Tuple<string, UsuarioModel>(prof.nomeusuario, prof));
                 }
 
-                var teste2 = MatrizQuery.Getall();
+                var matrizList= MatrizQuery.Getall();
 
-                foreach (var matriz in teste2)
+                foreach (var matriz in matrizList)
                 {
                     cmbMatriz.Items.Add(new Tuple<string, MatrizModel>(matriz.nome, matriz));
                 }
@@ -130,14 +130,14 @@ namespace Distribuição_de_aulas
                     }
                     else 
                     {
-                        MessageBox.Show("O professor selecionado nao esta disponivel no periodo solicitado");
+                        MessageBox.Show("O professor selecionado não está disponível no periodo solicitado");
 
                         //Caso exista conflitos no horario cadastrado na disciplina com o horario do professor selecionado, o codigo nao deve permitir o cadastro da disciplina;
                     }
                 }
                 else 
                 {
-                    MessageBox.Show("O professor selecionado nao esta disponivel no periodo solicitado");
+                    MessageBox.Show("O professor selecionado não está disponível no periodo solicitado");
                     //Caso exista conflitos no horario cadastrado na disciplina com o horario do professor selecionado, o codigo nao deve permitir o cadastro da disciplina;
                 }
 
